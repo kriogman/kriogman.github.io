@@ -114,3 +114,33 @@
     });
     
 }(jQuery)
+
+// Intersection Observer — reveal animations (fade-in + slide-up)
+(function () {
+    if (!('IntersectionObserver' in window)) return;
+
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(
+        '.feature-widget, .timeline, .explore-feature, .work-container.work-modern'
+    ).forEach(function (el) {
+        // Stagger delay based on position within the nearest row/container
+        var container = el.closest('.row, .main-timeline');
+        var query = el.classList.contains('feature-widget')     ? '.feature-widget'          :
+                    el.classList.contains('timeline')           ? '.timeline'                :
+                    el.classList.contains('explore-feature')    ? '.explore-feature'         :
+                    '.work-container.work-modern';
+        var siblings = container ? Array.from(container.querySelectorAll(query)) : [el];
+        var idx      = siblings.indexOf(el);
+        el.style.transitionDelay = (idx * 80) + 'ms';
+        el.classList.add('reveal-init');
+        observer.observe(el);
+    });
+}());

@@ -4,11 +4,35 @@
 .feature-widget {
     padding: 30px 45px;
     background-color: $white;
-    transition: all .3s cubic-bezier(.645,.045,.355,1);
+    transition: box-shadow .3s cubic-bezier(.645,.045,.355,1), transform .3s ease;
     box-shadow: -0.0625rem 0 0.625rem 0 rgba(0,0,0,0.07),0.3125rem 1.25rem 2.5rem 0 rgba(0,0,0,0.04) !important;
+    position: relative;
+    overflow: hidden;
+
+    // Accent line — slides in from left on hover
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: $primary;
+        transition: width 350ms ease-in-out;
+    }
+    &:hover::before {
+        width: 100%;
+    }
+
     .fea.icon-md {
         height: 38px;
         width: 38px;
+    }
+
+    // Icon animation on hover
+    .services-icon {
+        display: inline-block;
+        transition: transform 300ms cubic-bezier(.34,1.56,.64,1);
     }
 }
 .services-texts {
@@ -17,13 +41,14 @@
     }
 }
 .feature-widget:hover {
-    box-shadow: 0 10px 25px 10px rgba(0,0,0,.1);  
-    .services-texts {
-        .title {
-            color: $black;
-        }
+    box-shadow: 0 10px 25px 10px rgba(0,0,0,.1) !important;
+    transform: translateY(-3px);
+    .services-texts .title {
+        color: $primary;
+        transition: color 250ms ease;
     }
-    .services-icon { 
+    .services-icon {
+        transform: scale(1.2) rotate(-5deg);
         color: $primary !important;
     }
 }

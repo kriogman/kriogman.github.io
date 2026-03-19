@@ -22,8 +22,11 @@
     display: block;
     position: relative;
     border: 1px dashed #ddd;
+    transition: border-color 250ms ease-in-out, box-shadow 250ms ease-in-out;
     &:hover {
       text-decoration: none;
+      border-color: rgba($primary, 0.4);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     }
   }
   .timeline-icon{
@@ -101,7 +104,16 @@
 }
 
 
-// WORK EXPERTISE Skill 
+// Work Experience sticky title (resume section)
+@media (min-width: 992px) {
+  .work-content {
+    position: -webkit-sticky;
+    position: sticky;
+    top: calc(50vh - 80px);
+  }
+}
+
+// WORK EXPERTISE Skill
 .cta-full {
   .container-fluid {
     max-width: 100%;
@@ -144,13 +156,21 @@
 
 // skill icon file
 .card-body {
-  .skill-icon { 
+  .skill-icon {
     width: 80px;
     height: 80px;
     line-height: 80px;
-    transition: all 0.5s ease;
+    transition: transform 250ms ease-in-out, box-shadow 250ms ease-in-out;
     img {
       width: 35px;
+    }
+  }
+}
+.explore-feature {
+  &:hover {
+    .skill-icon {
+      transform: scale(1.08);
+      box-shadow: 0 0 0 6px rgba(0, 123, 254, 0.12), 0 6px 18px rgba(0, 0, 0, 0.12);
     }
   }
 }

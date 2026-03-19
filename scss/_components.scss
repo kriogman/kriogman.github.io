@@ -88,6 +88,24 @@
         }
     }
 
+}
+
+// Intersection Observer reveal animations
+.reveal-init {
+    opacity: 0;
+    transform: translateY(24px);
+}
+.revealed {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+    .reveal-init { opacity: 1; transform: none; }
+    .revealed { transition: none; }
+}
+
+.btn {
     // custom button
     .btn-primary {
         color: $white;

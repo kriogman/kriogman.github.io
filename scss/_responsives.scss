@@ -1,4 +1,51 @@
-// 
+//
 // responsives
-// 
+//
 
+// Tablet and below (< 768px)
+@media (max-width: 767px) {
+    // Reduce section vertical padding
+    .section {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    // Hero area
+    .bg-half-120 {
+        padding: 100px 0;
+    }
+    .title-heading .heading {
+        font-size: 38px;
+    }
+
+    // Back-to-top: ensure 44px tap target
+    .back-to-top {
+        width: 44px;
+        height: 44px;
+        line-height: 42px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+// Small mobile (< 576px)
+@media (max-width: 575px) {
+    .section {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .title-heading .heading {
+        font-size: 30px;
+    }
+
+    // Prevent content from causing horizontal scroll
+    .work-details {
+        padding: 1rem;
+    }
+
+    // Skill icon grid: 2 columns is enough
+    .cta-full .cta-full-img-box {
+        padding: 40px 5%;
+    }
+}
