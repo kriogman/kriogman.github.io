@@ -46,86 +46,24 @@
     position: relative;
     min-height: 100vh;
     display: flex;
-    align-items: flex-end;   // text anchored to bottom
-    background-color: #000;
+    align-items: center;
+    background-color: #1d2826; // deep dark teal — backdrop for GLSL hills
 
-    #hero-scene {
+    #hero-canvas {
         position: absolute;
         top: 0; left: 0; right: 0; bottom: 0;
         width: 100%;
         height: 100%;
         z-index: 1;
-
-        canvas {
-            display: block;
-            width: 100% !important;
-            height: 100% !important;
-        }
-    }
-
-    // Gradient vignette: black at bottom, fades to transparent at top
-    .hero-overlay {
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        z-index: 2;
         pointer-events: none;
-        background: linear-gradient(
-            to top,
-            #000 0%,
-            rgba(0, 0, 0, 0.65) 40%,
-            transparent 100%
-        );
     }
 
     .hero-content {
         position: relative;
-        z-index: 3;
+        z-index: 2;
         width: 100%;
+        padding-top: 100px; // clear fixed navbar
         padding-bottom: 80px;
-        text-align: center;
-    }
-
-    .hero-avatar {
-        width: 80px;
-        height: 80px;
-        object-fit: cover;
-        border: 2px solid rgba(41, 182, 246, 0.35);
-        margin-bottom: 20px;
-    }
-
-    .hero-label {
-        font-family: monospace;
-        font-size: 11px;
-        letter-spacing: 0.25em;
-        text-transform: uppercase;
-        color: rgba(41, 182, 246, 0.8); // sky-300
-        margin-bottom: 12px;
-    }
-
-    .hero-heading {
-        font-size: 2.6rem;
-        font-weight: 700;
-        color: #fff;
-        line-height: 1.15;
-        letter-spacing: -0.02em;
-        margin-bottom: 16px;
-    }
-
-    .hero-subheading {
-        font-size: 1rem;
-        color: rgba(255, 255, 255, 0.55);
-        max-width: 540px;
-        margin: 0 auto;
-        line-height: 1.65;
-    }
-
-    @media (max-width: 767px) {
-        .hero-heading {
-            font-size: 1.75rem;
-        }
-        .hero-content {
-            padding-bottom: 60px;
-        }
     }
 }
 .title-heading img {

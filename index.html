@@ -92,14 +92,18 @@
 
         <!-- Hero Area -->
         <div class="hero-area" id="home">
-            <div id="hero-scene"></div>
-            <div class="hero-overlay"></div>
+            <canvas id="hero-canvas"></canvas>
             <div class="hero-content">
                 <div class="container">
-                    <img src="images/pal.png" class="rounded-circle hero-avatar" alt="Javier González">
-                    <p class="hero-label">Platform Engineer &middot; SRE</p>
-                    <h1 class="hero-heading">Hi there, I’m Javier.</h1>
-                    <p class="hero-subheading">A decade building reliable, scalable infrastructure for fast-moving teams — from bare metal to Kubernetes, from on-call to GitOps.</p>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12 col-md-12 align-items-center text-center">
+                            <div class="title-heading mt-4 pb-60">
+                                <img src="images/pal.png" class="img-fluid rounded-circle" alt="">
+                                <h1 class="heading font-36 text-white mt-4">Hi there, I’m Javier.</h1>
+                                <h3 class="designation mb-3 text-white">Platform engineer with a decade building reliable, scalable infrastructure for fast-moving teams — from bare metal to Kubernetes, from on-call to GitOps.</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -703,10 +707,6 @@
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
 
-        <!--Partical js-->
-        <script src="js/particles.js"></script>  
-        <script src="js/particles.app.js"></script>
-
         <!-- Typed -->
         <script src="js/typed.js"></script>
         <script src="js/typed.init.js"></script>
@@ -717,9 +717,9 @@
         <!-- Main Js -->
         <script src="js/app.js"></script>
 
-        <!-- Three.js + Anomalous Matter hero -->
+        <!-- Three.js + GLSL Hills hero -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-        <script src="js/anomalous-matter-hero.js"></script>
+        <script src="js/glsl-hills.js"></script>
 
     </body>
 </html>
