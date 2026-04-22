@@ -791,6 +791,31 @@ a {
 .navbar-custom .nav-social li a {
   color: #5f7470 !important;
   font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.25s ease, box-shadow 0.25s ease;
+}
+.navbar-custom .nav-social li a i {
+  transition: color 0.2s ease;
+}
+.navbar-custom .nav-social li a:hover {
+  transform: translateY(-3px) scale(1.2);
+}
+.navbar-custom .nav-social li a:hover .mdi-linkedin {
+  color: #0077b5 !important;
+  filter: drop-shadow(0 2px 6px rgba(0, 119, 181, 0.55));
+}
+.navbar-custom .nav-social li a:hover .mdi-github {
+  color: #8b949e !important;
+  filter: drop-shadow(0 2px 6px rgba(139, 148, 158, 0.55));
+}
+.navbar-custom .nav-social li a:hover .mdi-instagram {
+  color: #e1306c !important;
+  filter: drop-shadow(0 2px 6px rgba(225, 48, 108, 0.55));
 }
 .navbar-custom .navbar-brand {
   color: #ffffff !important;
