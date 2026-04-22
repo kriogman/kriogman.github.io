@@ -6,18 +6,18 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap");
 
 // Palette 2026
-$lavender-blush:            #f3e8ee;
-$ash-grey:                  #bacdb0;
-$muted-teal:                #729b79;
-$blue-slate:                #475b63;
-$shadow-grey:               #2e2c2f;
+$space-indigo:              #22223b;
+$dusty-grape:               #4a4e69;
+$lilac-ash:                 #9a8c98;
+$almond-silk:               #c9ada7;
+$parchment:                 #f2e9e4;
 
 // Color variables
 $white:                     #ffffff;
-$black:                     $shadow-grey;   // body text
+$black:                     $space-indigo;  // body text — 13.4:1 on parchment ✓
 
-$custom:                    $muted-teal;    // decorative: preloader, selection
-$primary:                   $blue-slate;    // interactive: 5.33:1 on lavender ✓
+$custom:                    $lilac-ash;     // decorative: preloader, selection
+$primary:                   $dusty-grape;   // interactive — 6.9:1 on parchment ✓
 $secondary:                 #6c757d;
 $success:                   #28a745;
 $info:                      #17a2b8;
@@ -26,10 +26,10 @@ $danger:                    #dc3545;
 $dark:                      #343a40;
 $muted:                     #707070;
 $light-muted:               #8492a6;
-$light:                     $ash-grey;      // bg-light sections
+$light:                     $almond-silk;   // bg-light sections
 
 // Body Background
-$body-bg:                   $lavender-blush;
+$body-bg:                   $parchment;
 
 // Base font
 $font-size-base:              16px;
