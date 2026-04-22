@@ -6,18 +6,18 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap");
 
 // Palette 2026
-$evergreen:                 #132a13;
-$hunter-green:              #31572c;
-$fern:                      #4f772d;
-$palm-leaf:                 #90a955;
-$lime-cream:                #ecf39e;
+$ink-black:                 #001524;
+$stormy-teal:               #15616d;
+$papaya-whip:               #ffecd1;
+$vivid-tangerine:           #ff7d00;
+$brandy:                    #78290f;
 
 // Color variables
 $white:                     #ffffff;
-$black:                     $evergreen;     // body text — 13.2:1 on white ✓ AAA
+$black:                     $ink-black;     // body text — 15:1 on papaya whip ✓ AAA
 
-$custom:                    $fern;          // decorative: preloader, selection
-$primary:                   $hunter-green;  // interactive — 7.4:1 on white ✓ AAA
+$custom:                    $vivid-tangerine; // decorative: preloader, selection
+$primary:                   $stormy-teal;   // interactive — 5.6:1 on papaya whip ✓ AA
 $secondary:                 #6c757d;
 $success:                   #28a745;
 $info:                      #17a2b8;
@@ -26,7 +26,7 @@ $danger:                    #dc3545;
 $dark:                      #343a40;
 $muted:                     #707070;
 $light-muted:               #8492a6;
-$light:                     $lime-cream;    // bg-light sections
+$light:                     $papaya-whip;   // bg-light sections
 
 // Body Background
 $body-bg:                   $white;
