@@ -30,8 +30,8 @@
     }
   }
   .timeline-icon{
-    color: #007bff;
-    background: rgb(240, 240, 254);
+    color: $primary;
+    background: rgba($primary, 0.1);
     line-height: 100px;
     text-align: center;
     height: 80px;

@@ -5,12 +5,19 @@
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap");
 
+// Palette 2026
+$dark-teal:                 #095256;
+$teal:                      #087f8c;
+$seagrass:                  #5aaa95;
+$sage-green:                #86a873;
+$golden-bronze:             #bb9f06;
+
 // Color variables
 $white:                     #ffffff;
 $black:                     #161c2d;
 
-$custom:                    #5454d4;
-$primary:                   #007bff;
+$custom:                    $dark-teal;
+$primary:                   $teal;
 $secondary:                 #6c757d; 
 $success:                   #28a745;
 $info:                      #17a2b8;
