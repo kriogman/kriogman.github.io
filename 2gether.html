@@ -81,17 +81,13 @@
         <!-- Navbar End -->
 
         <!-- Hero Start -->
-        <section class="bg-half bg-light d-table w-100" style="background: url('images/astronaut1.png')center center;">
-            <div class="bg-overlay bg-overlay-white"></div>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12 text-center">
-                        <div class="page-next-level">
-                            <h4 class="title text-black"> Site Reliability Engineer @ <a class="text-primary" href="https://www.2gether.global/" target="_blank" >2gether</a> </h4>
-                        </div>
-                    </div>  <!--end col-->
-                </div><!--end row-->
-            </div> <!--end container-->
+        <section class="page-hero">
+            <canvas id="hero-canvas"></canvas>
+            <div class="page-hero-content">
+                <div class="container">
+                    <h4 class="page-hero-title">Site Reliability Engineer @ <a href="https://www.2gether.global/" target="_blank">2gether</a></h4>
+                </div>
+            </div>
         </section><!--end section-->
         <!-- Hero End -->
 
@@ -195,6 +191,10 @@
 
         <!-- Main Js -->
         <script src="js/app.js"></script>
+
+        <!-- Three.js + GLSL Hills hero -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="js/glsl-hills.js"></script>
 
     </body>
 </html>

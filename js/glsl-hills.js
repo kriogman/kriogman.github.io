@@ -128,21 +128,26 @@
 
     var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: false, alpha: true });
     var scene    = new THREE.Scene();
-    var camera   = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
+    var container = canvas.parentElement;
+
+    function w() { return container.clientWidth  || window.innerWidth;  }
+    function h() { return container.clientHeight || window.innerHeight; }
+
+    var camera   = new THREE.PerspectiveCamera(45, w() / h(), 1, 10000);
     var clock    = new THREE.Clock();
     var animId;
 
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(w(), h());
     renderer.setClearColor(0x000000, 0);
     camera.position.set(0, 16, CAMERA_Z);
     camera.lookAt(new THREE.Vector3(0, 28, 0));
     scene.add(mesh);
 
     function onResize() {
-      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.aspect = w() / h();
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(w(), h());
     }
 
     function animate() {
