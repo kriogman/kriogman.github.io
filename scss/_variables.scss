@@ -6,18 +6,18 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap");
 
 // Palette 2026
-$dusk-blue:                 #3d5a80;
-$powder-blue:               #98c1d9;
-$light-cyan:                #e0fbfc;
-$burnt-peach:               #ee6c4d;
-$jet-black:                 #293241;
+$frozen-water:              #c9fbff;
+$icy-aqua:                  #c2fcf7;
+$pearl-aqua:                #85bdbf;
+$blue-slate:                #57737a;
+$ink-black:                 #040f0f;
 
 // Color variables
 $white:                     #ffffff;
-$black:                     $jet-black;     // body text — 12.2:1 on light cyan ✓
+$black:                     $ink-black;     // body text — 18:1 on frozen water ✓
 
-$custom:                    $burnt-peach;   // decorative: preloader, selection
-$primary:                   $dusk-blue;     // interactive — 6.6:1 on light cyan ✓
+$custom:                    $pearl-aqua;    // decorative: preloader, selection
+$primary:                   $blue-slate;    // interactive — 4.7:1 on frozen water ✓ AA
 $secondary:                 #6c757d;
 $success:                   #28a745;
 $info:                      #17a2b8;
@@ -26,10 +26,10 @@ $danger:                    #dc3545;
 $dark:                      #343a40;
 $muted:                     #707070;
 $light-muted:               #8492a6;
-$light:                     $powder-blue;   // bg-light sections
+$light:                     $icy-aqua;      // bg-light sections (hue shift vs body)
 
 // Body Background
-$body-bg:                   $light-cyan;
+$body-bg:                   $frozen-water;
 
 // Base font
 $font-size-base:              16px;
