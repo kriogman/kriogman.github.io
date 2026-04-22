@@ -102,17 +102,3 @@ a {
 .para-desc-600 {
     max-width: 600px;
 }
-
-// Smooth section transitions — feather edges into white body
-section.bg-light {
-    box-shadow:
-        inset 0  40px 30px -30px rgba($white, 0.75),
-        inset 0 -40px 30px -30px rgba($white, 0.75);
-}
-section.section {
-    background-color: $white;
-}
-// Subtle divider between adjacent sections
-section + section {
-    border-top: 1px solid rgba($black, 0.05);
-}
