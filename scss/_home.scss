@@ -47,7 +47,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-color: #1d2826; // deep dark teal — backdrop for GLSL hills
+    background-color: darken($deep-teal, 25%); // very dark derivation of palette
 
     #hero-canvas {
         position: absolute;
@@ -78,7 +78,7 @@
     min-height: 260px;
     display: flex;
     align-items: center;
-    background-color: #1d2826;
+    background-color: darken($deep-teal, 25%); // very dark derivation of palette
     overflow: hidden;
 
     #hero-canvas {
@@ -99,13 +99,13 @@
     .page-hero-title {
         font-size: 1.5rem;
         font-weight: 600;
-        color: #fff;
+        color: $white;
         margin: 0;
         letter-spacing: -0.01em;
 
         a {
-            color: rgba(184, 189, 181, 0.9); // ash grey — matches hills tint
-            &:hover { color: #fff; }
+            color: rgba($ash-grey, 0.9); // palette ash grey — matches hills tint
+            &:hover { color: $white; }
         }
     }
 }

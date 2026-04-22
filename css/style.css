@@ -924,7 +924,7 @@ button:not(:disabled) {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-color: #1d2826;
+  background-color: rgb(37.5947867299, 45.9052132701, 44.3222748815);
 }
 .hero-area #hero-canvas {
   position: absolute;
@@ -956,7 +956,7 @@ button:not(:disabled) {
   min-height: 260px;
   display: flex;
   align-items: center;
-  background-color: #1d2826;
+  background-color: rgb(37.5947867299, 45.9052132701, 44.3222748815);
   overflow: hidden;
 }
 .page-hero #hero-canvas {
@@ -978,7 +978,7 @@ button:not(:disabled) {
 .page-hero .page-hero-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #fff;
+  color: #ffffff;
   margin: 0;
   letter-spacing: -0.01em;
 }
@@ -986,7 +986,7 @@ button:not(:disabled) {
   color: rgba(184, 189, 181, 0.9);
 }
 .page-hero .page-hero-title a:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
 .shadow {
