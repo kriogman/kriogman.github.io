@@ -4,8 +4,9 @@
 .footer {
     padding: 60px 0;
     position: relative;
-    background: #e3eef8;
-    color: #adb5bd;
+    background: $light;
+    color: $muted;
+
     .footer-logo {
         font-size: 30px;
         font-weight: 600;
@@ -37,4 +38,5 @@
 }
 .footer.footer-bar {
     padding: 25px 0;
+    background-color: $dark-teal !important;
 }
