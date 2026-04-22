@@ -21,12 +21,44 @@
     border-radius: 100px 0px 0px;
     display: block;
     position: relative;
-    border: 1px dashed #ddd;
+    border: 1px dashed rgba($black, 0.15);
     transition: border-color 250ms ease-in-out, box-shadow 250ms ease-in-out;
-    &:hover {
-      text-decoration: none;
-      border-color: rgba($primary, 0.4);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    // Linked entries: show hover affordance
+    &[href] {
+      &:hover {
+        text-decoration: none;
+        border-color: rgba($primary, 0.45);
+        box-shadow: 0 4px 20px rgba($black, 0.07);
+      }
+      // Arrow hint top-right corner
+      &::after {
+        content: '↗';
+        position: absolute;
+        top: 14px;
+        right: 18px;
+        font-size: 13px;
+        color: rgba($primary, 0.35);
+        transition: color 250ms ease-in-out, transform 200ms ease-in-out;
+      }
+      &:hover::after {
+        color: $primary;
+        transform: translate(2px, -2px);
+      }
+    }
+    // Non-linked entries: no pointer, no hover effect
+    &:not([href]) {
+      cursor: default;
+      &:hover {
+        border-color: rgba($black, 0.15);
+        box-shadow: none;
+      }
+    }
+    // Company name as accent
+    .company {
+      color: $primary;
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.3px;
     }
   }
   .timeline-icon{
