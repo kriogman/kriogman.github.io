@@ -115,6 +115,28 @@
     
 }(jQuery)
 
+// Wave text — split .wave-text headings into per-char spans for hover animation
+(function () {
+    document.querySelectorAll('.wave-text').forEach(function (el) {
+        var text = el.textContent;
+        el.textContent = '';
+        var charIndex = 0;
+        text.split('').forEach(function (char) {
+            var span = document.createElement('span');
+            span.classList.add('wt-char');
+            if (char === ' ') {
+                span.classList.add('wt-space');
+                span.innerHTML = '&nbsp;';
+            } else {
+                span.textContent = char;
+                span.style.setProperty('--i', charIndex);
+                charIndex++;
+            }
+            el.appendChild(span);
+        });
+    });
+}());
+
 // Intersection Observer — reveal animations (fade-in + slide-up)
 (function () {
     if (!('IntersectionObserver' in window)) return;

@@ -102,3 +102,25 @@ a {
 .para-desc-600 {
     max-width: 600px;
 }
+
+// Wave text — hover effect on section titles
+// JS splits text into .wt-char spans with --i index for stagger
+.wave-text {
+    cursor: default;
+
+    .wt-char {
+        display: inline-block;
+        // spring-like cubic-bezier: slight overshoot then settle
+        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        transition-delay: calc(var(--i) * 0.03s);
+    }
+
+    &:hover .wt-char {
+        transform: translateY(-5px) scale(1.15);
+    }
+
+    // Reset: reverse stagger (last char resets first)
+    .wt-char.wt-space {
+        transform: none !important;
+    }
+}
