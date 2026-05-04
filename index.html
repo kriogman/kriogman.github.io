@@ -58,23 +58,23 @@
                 <div class="collapse navbar-collapse navigation" id="navbarCollapse">
                     <ul class="navbar-nav navbar-nav-link ml-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#home">Home</a>
+                            <a class="nav-link" href="#home" data-i18n="nav.home">Home</a>
                         </li><!--end nav item-->
                         <!-- <li class="nav-item active">
                             <a class="nav-link" href="#about">About</a>
                         </li> -->
                         <!--end nav item-->
                         <li class="nav-item">
-                            <a class="nav-link" href="#mindset">Mindset</a>
+                            <a class="nav-link" href="#mindset" data-i18n="nav.mindset">Mindset</a>
                         </li><!--end nav item-->
                         <li class="nav-item">
-                            <a class="nav-link" href="#resume">Resume</a>
+                            <a class="nav-link" href="#resume" data-i18n="nav.resume">Resume</a>
                         </li><!--end nav item-->
                         <li class="nav-item">
-                            <a class="nav-link" href="#skills">Skills & Tech</a>
+                            <a class="nav-link" href="#skills" data-i18n="nav.skills">Skills &amp; Tech</a>
                         </li><!--end nav item-->
                         <li class="nav-item">
-                            <a class="nav-link" href="#studies">Studies</a>
+                            <a class="nav-link" href="#studies" data-i18n="nav.studies">Studies</a>
                         </li>
                         <!--end nav item-->
                     </ul>
@@ -84,8 +84,13 @@
                         <li class="list-inline-item mr-2"><a href="https://github.com/kriogman" target="_blank"><i class="mdi mdi-github"></i></a></li>
                         <li class="list-inline-item"><a href="https://www.instagram.com/kriogman/" target="_blank"><i class="mdi mdi-instagram"></i></a></li>
                     </ul>
-                    
-                </div> 
+                    <div class="lang-switcher ml-3">
+                        <a href="#" data-lang="en" class="lang-option active">EN</a>
+                        <span class="lang-sep">/</span>
+                        <a href="#" data-lang="es" class="lang-option">ES</a>
+                    </div>
+
+                </div>
             </div><!--end container-->
 		</nav><!--end navbar-->
         <!-- Navbar End -->
@@ -100,7 +105,7 @@
                             <div class="title-heading mt-4 pb-60">
                                 <img src="images/pal.png" class="img-fluid rounded-circle" alt="">
                                 <h1 class="heading font-36 text-white mt-4">Javier González.</h1>
-                                <h3 class="designation mb-3 text-white">A decade making sure the infrastructure is never the reason a team can't ship.</h3>
+                                <h3 class="designation mb-3 text-white" data-i18n="hero.tagline">A decade making sure the infrastructure is never the reason a team can't ship.</h3>
                             </div>
                         </div>
                     </div>
@@ -119,11 +124,11 @@
                                         <!--<img src="images/client/05.jpg" class="avatar avatar-large rounded-circle shadow d-block mx-auto" alt="">--> 
                                         <div class="about-details key-feature bg-light">
                                             <div class="media-body content">
-                                                <h6 class="title mb-2">Personal Details</h6>
+                                                <h6 class="title mb-2" data-i18n="about.details.title">Personal Details</h6>
                                                 <div class="bor-bottom mt-2 mb-2"></div>
                                                 <p class="text-muted mb-2 mt-3 font-14"><a href="javascript:void(0)" class="text-black">Email: </a> jgonzalezf90@gmail.com</p>
-                                                <p class="text-muted mb-2 font-14"><a href="javascript:void(0)" class="text-black">Languages: </a> Spanish, English</p>
-                                                <p class="text-muted mb-0 font-14"><a href="javascript:void(0)" class="text-black">Nationality: </a> Spanish</p>
+                                                <p class="text-muted mb-2 font-14"><a href="javascript:void(0)" class="text-black" data-i18n="about.details.languages_label">Languages: </a><span data-i18n="about.details.languages_value">Spanish, English</span></p>
+                                                <p class="text-muted mb-0 font-14"><a href="javascript:void(0)" class="text-black" data-i18n="about.details.nationality_label">Nationality: </a><span data-i18n="about.details.nationality_value">Spanish</span></p>
                                             </div>
                                         </div>
                                     </div>
@@ -131,8 +136,8 @@
                                     <div class="col-lg-9 col-md-8">
                                         <div class="row align-items-end">
                                             <div class="col-md-12 text-md-left text-center mt-4 mt-sm-0">
-                                                <h4 class="heading mr-2">I Am a <span class="element text-primary" data-elements="DevOps Engineer, Site Reliability Engineer, Cloud Engineer"></span></h4>
-                                                <p class="text-light-muted mt-2">Over a decade designing, building, and operating cloud-native platforms. I work at the intersection of infrastructure, reliability, and developer experience — the systems and pipelines that let product teams ship fast without breaking things.</p>
+                                                <h4 class="heading mr-2">I Am a <span class="element text-primary" data-elements="DevOps Engineer, Site Reliability Engineer, Cloud Engineer" data-i18n-attr="data-elements:about.roles"></span></h4>
+                                                <p class="text-light-muted mt-2" data-i18n="about.body">Over a decade designing, building, and operating cloud-native platforms. I work at the intersection of infrastructure, reliability, and developer experience — the systems and pipelines that let product teams ship fast without breaking things.</p>
                                                 
                                             </div><!--end col-->
                                         </div><!--end row-->
@@ -152,8 +157,8 @@
                     <div class="col-12 text-center">
                         <div class="container-title text-center mb-4 pb-2">
                             <div class="titles">
-                                <h2 class="title text-capitalize mb-4 wave-text"> The mindset.</h2>
-                                <p class="pera-title para-desc-600 text-light-muted mb-0 mx-auto">Good engineering is as much about how you think as what you ship. These are the principles that guide how I approach reliability, delivery, and collaboration.</p>
+                                <h2 class="title text-capitalize mb-4 wave-text" data-i18n="mindset.title"> The mindset.</h2>
+                                <p class="pera-title para-desc-600 text-light-muted mb-0 mx-auto" data-i18n="mindset.subtitle">Good engineering is as much about how you think as what you ship. These are the principles that guide how I approach reliability, delivery, and collaboration.</p>
                                 <span></span>
                             </div>
                         </div>
@@ -167,8 +172,8 @@
                                 <i class="fas fa-robot fa-2x"></i>
                             </div>
                             <div class="services-texts">
-                                <h3 class="title mb-3">Toil is a bug, not a feature</h3>
-                                <p class="text-light-muted mb-4">Manual, repetitive work compounds quietly until it owns your week. Every process that can be codified should be — provisioning, testing, deployment, remediation. The goal of automation isn't efficiency. It's preserving engineering judgment for problems that actually require it.</p>
+                                <h3 class="title mb-3" data-i18n="mindset.card1.title">Toil is a bug, not a feature</h3>
+                                <p class="text-light-muted mb-4" data-i18n="mindset.card1.body">Manual, repetitive work compounds quietly until it owns your week. Every process that can be codified should be — provisioning, testing, deployment, remediation. The goal of automation isn't efficiency. It's preserving engineering judgment for problems that actually require it.</p>
                                 <!-- <a href="javascript:void(0)" class="text-primary">Read more <i class="mdi mdi-chevron-right"></i></a> -->
                             </div>
                         </div>
@@ -180,8 +185,8 @@
                                 <i class="fas fa-infinity fa-2x"></i>
                             </div>
                             <div class="services-texts">
-                                <h3 class="title mb-3">Deployment frequency is a health metric</h3>
-                                <p class="text-light-muted mb-4">How often a team deploys tells you more about its culture than any post-mortem. Small, frequent releases compress feedback loops, reduce blast radius, and make rollbacks trivial. CI/CD isn't a tooling choice — it's a signal that a team owns what it ships end to end.</p>
+                                <h3 class="title mb-3" data-i18n="mindset.card2.title">Deployment frequency is a health metric</h3>
+                                <p class="text-light-muted mb-4" data-i18n="mindset.card2.body">How often a team deploys tells you more about its culture than any post-mortem. Small, frequent releases compress feedback loops, reduce blast radius, and make rollbacks trivial. CI/CD isn't a tooling choice — it's a signal that a team owns what it ships end to end.</p>
                                 <!-- <a href="javascript:void(0)" class="text-primary">Read more <i class="mdi mdi-chevron-right"></i></a> -->
                             </div>
                         </div>
@@ -193,8 +198,8 @@
                                 <i class="fas fa-cubes fa-2x"></i>
                             </div>
                             <div class="services-texts">
-                                <h3 class="title mb-3">The desired state lives in Git</h3>
-                                <p class="text-light-muted mb-4">Infrastructure defined as code is infrastructure you can review, reproduce, and audit. GitOps extends this further: the system converges to what's in the repository, not to what someone ran last Tuesday. Version control becomes the change log; pull requests become the approval process.</p>
+                                <h3 class="title mb-3" data-i18n="mindset.card3.title">The desired state lives in Git</h3>
+                                <p class="text-light-muted mb-4" data-i18n="mindset.card3.body">Infrastructure defined as code is infrastructure you can review, reproduce, and audit. GitOps extends this further: the system converges to what's in the repository, not to what someone ran last Tuesday. Version control becomes the change log; pull requests become the approval process.</p>
                                 <!-- <a href="javascript:void(0)" class="text-primary">Read more <i class="mdi mdi-chevron-right"></i></a> -->
                             </div>
                         </div>
@@ -208,8 +213,8 @@
                                 <i class="fas fa-cogs fa-2x"></i>
                             </div>
                             <div class="services-texts">
-                                <h3 class="title mb-3">You build it, you run it</h3>
-                                <p class="text-light-muted mb-4">The handoff between development and operations is where accountability goes to die. When the team that ships is also the team on-call, the incentives align. DevOps isn't a set of tools — it's the decision to own the full lifecycle of what you build.</p>
+                                <h3 class="title mb-3" data-i18n="mindset.card4.title">You build it, you run it</h3>
+                                <p class="text-light-muted mb-4" data-i18n="mindset.card4.body">The handoff between development and operations is where accountability goes to die. When the team that ships is also the team on-call, the incentives align. DevOps isn't a set of tools — it's the decision to own the full lifecycle of what you build.</p>
                                 <!-- <a href="javascript:void(0)" class="text-primary">Read more <i class="mdi mdi-chevron-right"></i></a> -->
                             </div>
                         </div>
@@ -221,8 +226,8 @@
                                 <i class="far fa-check-circle fa-2x"></i>
                             </div>
                             <div class="services-texts">
-                                <h3 class="title mb-3">Failure is data, not shame</h3>
-                                <p class="text-light-muted mb-4">Distributed systems fail. The question is what you learn. Error budgets make the reliability contract explicit — a formal agreement between velocity and stability. Blameless postmortems turn incidents into institutional memory. Every failure should make the next one cheaper.</p>
+                                <h3 class="title mb-3" data-i18n="mindset.card5.title">Failure is data, not shame</h3>
+                                <p class="text-light-muted mb-4" data-i18n="mindset.card5.body">Distributed systems fail. The question is what you learn. Error budgets make the reliability contract explicit — a formal agreement between velocity and stability. Blameless postmortems turn incidents into institutional memory. Every failure should make the next one cheaper.</p>
                                 <!-- <a href="javascript:void(0)" class="text-primary">Read more <i class="mdi mdi-chevron-right"></i></a> -->
                             </div>
                         </div>
@@ -234,8 +239,8 @@
                                 <i class="fas fa-chart-bar fa-2x"></i>
                             </div>
                             <div class="services-texts">
-                                <h3 class="title mb-3">You can't improve what you don't observe</h3>
-                                <p class="text-light-muted mb-4">Monitoring tells you something is broken. Observability tells you why. SLIs and SLOs aren't dashboard metrics — they're commitments. DORA metrics measure whether delivery is actually improving over time. Without data, improvement is just opinion.</p>
+                                <h3 class="title mb-3" data-i18n="mindset.card6.title">You can't improve what you don't observe</h3>
+                                <p class="text-light-muted mb-4" data-i18n="mindset.card6.body">Monitoring tells you something is broken. Observability tells you why. SLIs and SLOs aren't dashboard metrics — they're commitments. DORA metrics measure whether delivery is actually improving over time. Without data, improvement is just opinion.</p>
                                 <!-- <a href="javascript:void(0)" class="text-primary">Read more <i class="mdi mdi-chevron-right"></i></a> -->
                             </div>
                         </div>
@@ -252,8 +257,8 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-4">
                         <div class="work-content">
-                            <h2 class="text-capitalize wave-text">Work Experience</h2>
-                            <p class="mb-0 text-light-muted">These are the roles and tasks that I have performed in my years of experience.</p>
+                            <h2 class="text-capitalize wave-text" data-i18n="resume.title">Work Experience</h2>
+                            <p class="mb-0 text-light-muted" data-i18n="resume.subtitle">These are the roles and tasks that I have performed in my years of experience.</p>
                             <!-- <a href="#" class="btn btn btn-primary rounded mt-4 pt-2">See More <i class="mdi mdi-chevron-right"></i></a> -->
                         </div>
                     </div>
@@ -269,7 +274,7 @@
                                         <h3 class="title mb-0">DevOps Engineer</h3>
                                         <small class="company">Quadrant Travel Technologies</small>
                                         <span class="badge skill-badge education-badge margin-50 badge-light">2022 - </span>
-                                        <p class="description text-light-muted mt-2">Designing and operating cloud-native platform infrastructure using IaC and GitOps principles, with a focus on reliability, security, and scalability across the full delivery lifecycle.</p>
+                                        <p class="description text-light-muted mt-2" data-i18n="resume.quadrant.desc">Designing and operating cloud-native platform infrastructure using IaC and GitOps principles, with a focus on reliability, security, and scalability across the full delivery lifecycle.</p>
                                     </a>
                                 </div>
                                 <div class="timeline mt-4">
@@ -280,7 +285,7 @@
                                         <h3 class="title mb-0">Site Reliability Engineer</h3>
                                         <small class="company">2gether</small>
                                         <span class="badge skill-badge education-badge badge-light">2021 - 2022</span>
-                                        <p class="description text-light-muted mt-2">Embedded SRE at a regulated challenger bank offering crypto and fiat financial services. Owned the cloud infrastructure, observability stack, and CI/CD pipelines — keeping real-time financial operations stable while continuously driving down infrastructure costs.</p>
+                                        <p class="description text-light-muted mt-2" data-i18n="resume.2gether.desc">Embedded SRE at a regulated challenger bank offering crypto and fiat financial services. Owned the cloud infrastructure, observability stack, and CI/CD pipelines — keeping real-time financial operations stable while continuously driving down infrastructure costs.</p>
                                     </a>
                                 </div>
                                 <div class="timeline mt-4">
@@ -291,7 +296,7 @@
                                         <h3 class="title mb-0">R&D Consultant</h3>
                                         <small class="company">Yogabot</small>
                                         <span class="badge skill-badge education-badge margin-50 badge-light">2020 - 2021</span>
-                                        <p class="description text-light-muted mt-2">R&amp;D engagement exploring blockchain architecture and tokenomics to support a decentralized wellness ecosystem.</p>
+                                        <p class="description text-light-muted mt-2" data-i18n="resume.yogabot.desc">R&amp;D engagement exploring blockchain architecture and tokenomics to support a decentralized wellness ecosystem.</p>
                                     </a>
                                 </div>
                                 <div class="timeline mt-4">
@@ -302,7 +307,7 @@
                                         <h3 class="title mb-0">Personal development</h3>
                                         <small class="company"></small>
                                         <span class="badge skill-badge education-badge badge-light">2020 </span>
-                                        <p class="description text-light-muted mt-2">Completed a long-pending university degree while deepening knowledge in investments, financial markets, and distributed ledger technologies.</p>
+                                        <p class="description text-light-muted mt-2" data-i18n="resume.personal.desc">Completed a long-pending university degree while deepening knowledge in investments, financial markets, and distributed ledger technologies.</p>
                                     </a>
                                 </div>
                                 <div class="timeline mt-4">
@@ -313,7 +318,7 @@
                                         <h3 class="title mb-0">DevOps Engineer</h3>
                                         <small class="company">Fintonic</small>
                                         <span class="badge skill-badge education-badge margin-50 badge-light">2017 - 2020</span>
-                                        <p class="description text-light-muted mt-2">DevOps/SRE at a personal finance platform operating across Spain and Latin America. Contributed to a three-year infrastructure overhaul — migrating from IaaS to Kubernetes, building CI/CD pipelines and IaC tooling, and wiring up observability across the full stack. Production stayed up throughout.</p>
+                                        <p class="description text-light-muted mt-2" data-i18n="resume.fintonic.desc">DevOps/SRE at a personal finance platform operating across Spain and Latin America. Contributed to a three-year infrastructure overhaul — migrating from IaaS to Kubernetes, building CI/CD pipelines and IaC tooling, and wiring up observability across the full stack. Production stayed up throughout.</p>
                                     </a>
                                 </div>
                                 <div class="timeline mt-4">
@@ -324,7 +329,7 @@
                                         <h3 class="title mb-0">Junior Systems Architect</h3>
                                         <small class="company">Kimia</small>
                                         <span class="badge skill-badge education-badge badge-light">2015 - 2017</span>
-                                        <p class="description text-light-muted mt-2">First IT role, at a global digital advertising company. Provisioned and managed bare metal Linux servers and AWS cloud infrastructure, built CI/CD pipelines, and wired up monitoring across the platform. The foundation that everything else was built on.</p>
+                                        <p class="description text-light-muted mt-2" data-i18n="resume.kimia.desc">First IT role, at a global digital advertising company. Provisioned and managed bare metal Linux servers and AWS cloud infrastructure, built CI/CD pipelines, and wired up monitoring across the platform. The foundation that everything else was built on.</p>
                                     </a>
                                 </div>
                                 <!-- <div class="timeline mt-4">
@@ -357,9 +362,9 @@
                                 <div class="col-12 text-center mb-3">
                                     <div class="container-title">
                                         <div class="titles">
-                                            <h4 class="title title-line text-capitalize mb-4 wave-text">Work Expertise</h4>
+                                            <h4 class="title title-line text-capitalize mb-4 wave-text" data-i18n="skills.title">Work Expertise</h4>
                                         </div>
-                                        <p class="text-light-muted mx-auto width-max mb-0">Tools and technologies I've used in production — across cloud, containers, pipelines, and observability.</p>
+                                        <p class="text-light-muted mx-auto width-max mb-0" data-i18n="skills.subtitle">Tools and technologies I've used in production — across cloud, containers, pipelines, and observability.</p>
                                     </div>
                                 </div><!--end col-->
                             </div>
@@ -575,7 +580,7 @@
                     <div class="col-12 text-center">
                         <div class="container-title text-center mb-4 pb-2">
                             <div class="titles">
-                                <h2 class="title text-capitalize mb-4 wave-text">i am a former student at...</h2>
+                                <h2 class="title text-capitalize mb-4 wave-text" data-i18n="studies.title">i am a former student at...</h2>
                                 <span></span>
                             </div>
                         </div>
@@ -591,7 +596,7 @@
                                 <div class="overlay-work bg-dark"></div>
                                 <div class="content">
                                     <h5 class="mb-0"><a href="https://www.uc3m.es/grado/telematica" target="_blank" class="text-white title">UNIVERSITY CARLOS III OF MADRID</a></h5>
-                                    <h6 class="text-light tag mb-0">Degree in Telematics Engineering</h6>
+                                    <h6 class="text-light tag mb-0" data-i18n="studies.uc3m.degree">Degree in Telematics Engineering</h6>
                                 </div>
                             </div>
                         </div>
@@ -604,7 +609,7 @@
                                 <div class="overlay-work bg-dark"></div>
                                 <div class="content">
                                     <h5 class="mb-0"><a href="https://www.cujae.edu.cu/" target="_blank" class="text-white title">TECHNOLOGICAL UNIVERSITY OF HAVANA</a></h5>
-                                    <h6 class="text-light tag mb-0"> Telecommunications and Electronics Engineering</h6>
+                                    <h6 class="text-light tag mb-0" data-i18n="studies.cujae.degree"> Telecommunications and Electronics Engineering</h6>
                                 </div>
                             </div>
                         </div>
@@ -614,7 +619,7 @@
                 <!-- Final Degree Project -->
                 <div class="row justify-content-center mt-5">
                     <div class="col-12 text-center mb-3">
-                        <p class="text-uppercase text-muted mb-0" style="font-size: 0.75rem; letter-spacing: 0.12em;">Final Degree Project</p>
+                        <p class="text-uppercase text-muted mb-0" style="font-size: 0.75rem; letter-spacing: 0.12em;" data-i18n="studies.fdp.label">Final Degree Project</p>
                     </div>
                     <div class="col-lg-8 col-md-10 col-12">
                         <div class="card border-0 rounded shadow-lg p-4">
@@ -623,10 +628,10 @@
                                     <i data-feather="wifi" style="width:36px;height:36px;stroke-width:1.5;"></i>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <h5 class="title mb-1">Zigbee Gateway for IoT Environment</h5>
-                                    <p class="text-muted mb-0" style="font-size:0.9rem;">End-to-end IoT architecture connecting Zigbee sensors to AWS via MQTT — built on Raspberry Pi with Node-RED and Zigbee2MQTT.</p>
+                                    <h5 class="title mb-1" data-i18n="studies.fdp.title">Zigbee Gateway for IoT Environment</h5>
+                                    <p class="text-muted mb-0" style="font-size:0.9rem;" data-i18n="studies.fdp.body">End-to-end IoT architecture connecting Zigbee sensors to AWS via MQTT — built on Raspberry Pi with Node-RED and Zigbee2MQTT.</p>
                                 </div>
-                                <a href="IoT.html" target="_blank" class="btn btn-outline-primary btn-sm rounded ml-4 flex-shrink-0">View Project <i data-feather="arrow-right" class="fea icon-sm"></i></a>
+                                <a href="IoT.html" target="_blank" class="btn btn-outline-primary btn-sm rounded ml-4 flex-shrink-0"><span data-i18n="studies.fdp.cta">View Project</span> <i data-feather="arrow-right" class="fea icon-sm"></i></a>
                             </div>
                         </div>
                     </div><!--end col-->
@@ -644,8 +649,8 @@
                     <div class="col-12 text-center">
                         <div class="container-title text-center mb-4 pb-2">
                             <div class="titles">
-                                <h2 class="title text-capitalize mb-4 wave-text">Let's Build Something Together.</h2>
-                                <p class="pera-title para-desc-600 text-light-muted mb-0 mx-auto">Got a platform to build, a reliability problem to solve, or just want to talk engineering? I'm all ears.</p>
+                                <h2 class="title text-capitalize mb-4 wave-text" data-i18n="contact.title">Let's Build Something Together.</h2>
+                                <p class="pera-title para-desc-600 text-light-muted mb-0 mx-auto" data-i18n="contact.body">Got a platform to build, a reliability problem to solve, or just want to talk engineering? I'm all ears.</p>
                                 <span></span>
                             </div>
                         </div>
@@ -719,6 +724,9 @@
 
         <!-- Glowy waves hero -->
         <script src="js/wave-hero.js"></script>
+
+        <!-- i18n -->
+        <script src="js/i18n.js"></script>
 
     </body>
 </html>
