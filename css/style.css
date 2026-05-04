@@ -968,7 +968,7 @@ button:not(:disabled) {
 
 .hero-area {
   position: relative;
-  min-height: 100vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
   background-color: rgb(37.5947867299, 45.9052132701, 44.3222748815);
@@ -988,8 +988,8 @@ button:not(:disabled) {
   position: relative;
   z-index: 2;
   width: 100%;
-  padding-top: 100px;
-  padding-bottom: 80px;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 .title-heading img {

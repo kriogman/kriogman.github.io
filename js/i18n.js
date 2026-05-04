@@ -12,7 +12,8 @@
         studies: 'Studies'
       },
       hero: {
-        tagline: "A decade making sure the infrastructure is never the reason a team can't ship."
+        name: "Hi there, I'm Javier.",
+        tagline: "Building reliable, scalable infrastructure for fast-moving teams — so shipping is the default and ops is never the bottleneck."
       },
       about: {
         roles: 'DevOps Engineer, Site Reliability Engineer, Cloud Engineer',
@@ -175,7 +176,8 @@
         studies: 'Estudios'
       },
       hero: {
-        tagline: 'Una década asegurando que la infraestructura nunca sea la razón por la que un equipo no puede desplegar.'
+        name: 'Hola, soy Javier.',
+        tagline: 'Construyendo infraestructura fiable y escalable para equipos ágiles — para que desplegar sea la norma y las ops nunca sean el cuello de botella.'
       },
       about: {
         roles: 'Ingeniero DevOps, Ingeniero de Fiabilidad, Ingeniero Cloud',
