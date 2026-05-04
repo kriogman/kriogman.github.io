@@ -51,23 +51,23 @@
             <div class="collapse navbar-collapse navigation" id="navbarCollapse">
                 <ul class="navbar-nav navbar-nav-link ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html#home">Home</a>
+                        <a class="nav-link" href="index.html#home" data-i18n="nav.home">Home</a>
                     </li>
                     <!--end nav item-->
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#mindset">Mindset</a>
+                        <a class="nav-link" href="index.html#mindset" data-i18n="nav.mindset">Mindset</a>
                     </li>
                     <!--end nav item-->
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#resume">Resume</a>
+                        <a class="nav-link" href="index.html#resume" data-i18n="nav.resume">Resume</a>
                     </li>
                     <!--end nav item-->
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#skills">Skills & Tech</a>
+                        <a class="nav-link" href="index.html#skills" data-i18n="nav.skills">Skills &amp; Tech</a>
                     </li>
                     <!--end nav item-->
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#studies">Studies</a>
+                        <a class="nav-link" href="index.html#studies" data-i18n="nav.studies">Studies</a>
                     </li>
                     <!--end nav item-->
                 </ul>
@@ -80,7 +80,12 @@
                     <li class="list-inline-item"><a href="https://www.instagram.com/kriogman/" target="_blank"><i
                                 class="mdi mdi-instagram"></i></a></li>
                 </ul>
-    
+                <div class="lang-switcher ml-3">
+                    <a href="#" data-lang="en" class="lang-option active">EN</a>
+                    <span class="lang-sep">/</span>
+                    <a href="#" data-lang="es" class="lang-option">ES</a>
+                </div>
+
             </div>
         </div>
         <!--end container-->
@@ -93,7 +98,7 @@
         <canvas id="hero-canvas"></canvas>
         <div class="page-hero-content">
             <div class="container">
-                <h4 class="page-hero-title">Junior Systems Architect @ <a href="https://kimiagroup.com/" target="_blank">Kimia</a></h4>
+                <h4 class="page-hero-title"><span data-i18n="page_kimia.hero">Junior Systems Architect @ </span><a href="https://kimiagroup.com/" target="_blank">Kimia</a></h4>
             </div>
         </div>
     </section>
@@ -109,27 +114,27 @@
                     <div class="row mr-lg-4">
                         <div class="col-lg-12">
                             <div class="work-details rounded">
-                                <p class="text-muted mb-4">Kimia is a global digital advertising and performance marketing company. As a Junior Systems Architect within the Operations team, I managed and evolved the infrastructure supporting the business platform — my first professional role in IT infrastructure.</p>
+                                <p class="text-muted mb-4" data-i18n="page_kimia.intro">Kimia is a global digital advertising and performance marketing company. As a Junior Systems Architect within the Operations team, I managed and evolved the infrastructure supporting the business platform — my first professional role in IT infrastructure.</p>
 
-                                <h5 class="title mb-3 mt-4 border-bottom pb-3">My Role &amp; Responsibilities</h5>
+                                <h5 class="title mb-3 mt-4 border-bottom pb-3" data-i18n="page_kimia.role_title">My Role &amp; Responsibilities</h5>
                                 <ul class="text-muted mb-4">
-                                    <li class="mb-1">Resolved incidents and maintained availability of the business platform</li>
-                                    <li class="mb-1">Provisioned and managed bare metal servers running Debian, CentOS, and Ubuntu</li>
-                                    <li class="mb-1">Automated server configuration and provisioning using Puppet and Foreman</li>
-                                    <li class="mb-1">Managed log storage and application backup processes</li>
-                                    <li class="mb-1">Administered MongoDB and MySQL production databases</li>
-                                    <li class="mb-1">Developed and operated cloud infrastructure on AWS</li>
-                                    <li class="mb-1">Built and maintained CI/CD pipelines using Jenkins and Ansible</li>
-                                    <li class="mb-1">Monitored platform health using Nagios, CloudWatch, PagerDuty, and Munin</li>
-                                    <li class="mb-1">Managed source code repositories on Bitbucket and SVN</li>
-                                    <li class="mb-1">Administered DNS servers for the business domain</li>
+                                    <li class="mb-1" data-i18n="page_kimia.li1">Resolved incidents and maintained availability of the business platform</li>
+                                    <li class="mb-1" data-i18n="page_kimia.li2">Provisioned and managed bare metal servers running Debian, CentOS, and Ubuntu</li>
+                                    <li class="mb-1" data-i18n="page_kimia.li3">Automated server configuration and provisioning using Puppet and Foreman</li>
+                                    <li class="mb-1" data-i18n="page_kimia.li4">Managed log storage and application backup processes</li>
+                                    <li class="mb-1" data-i18n="page_kimia.li5">Administered MongoDB and MySQL production databases</li>
+                                    <li class="mb-1" data-i18n="page_kimia.li6">Developed and operated cloud infrastructure on AWS</li>
+                                    <li class="mb-1" data-i18n="page_kimia.li7">Built and maintained CI/CD pipelines using Jenkins and Ansible</li>
+                                    <li class="mb-1" data-i18n="page_kimia.li8">Monitored platform health using Nagios, CloudWatch, PagerDuty, and Munin</li>
+                                    <li class="mb-1" data-i18n="page_kimia.li9">Managed source code repositories on Bitbucket and SVN</li>
+                                    <li class="mb-1" data-i18n="page_kimia.li10">Administered DNS servers for the business domain</li>
                                 </ul>
 
-                                <h5 class="title mb-3 mt-4 border-bottom pb-3">Tech Stack</h5>
+                                <h5 class="title mb-3 mt-4 border-bottom pb-3" data-i18n="page_kimia.stack_title">Tech Stack</h5>
                                 <p class="text-muted mb-4">AWS · Puppet · Foreman · Jenkins · Ansible · MongoDB · MySQL · Nagios · CloudWatch · PagerDuty · Munin · Debian · CentOS · Ubuntu · Bitbucket · SVN</p>
 
-                                <h5 class="title mb-3 mt-4 border-bottom pb-3">Key Outcomes</h5>
-                                <p class="text-muted mb-0">Built operational foundations in monitoring, configuration management, and cloud infrastructure for a global ad-tech platform, establishing hands-on experience across the full Linux sysadmin and DevOps toolchain.</p>
+                                <h5 class="title mb-3 mt-4 border-bottom pb-3" data-i18n="page_kimia.outcomes_title">Key Outcomes</h5>
+                                <p class="text-muted mb-0" data-i18n="page_kimia.outcomes">Built operational foundations in monitoring, configuration management, and cloud infrastructure for a global ad-tech platform, establishing hands-on experience across the full Linux sysadmin and DevOps toolchain.</p>
                             </div>
                         </div>
                         <!--end col-->
@@ -153,8 +158,8 @@
                 <div class="col-12 text-center">
                     <div class="container-title text-center mb-4 pb-2">
                         <div class="titles">
-                            <h2 class="title text-capitalize mb-4 wave-text">Let's Build Something Together.</h2>
-                            <p class="pera-title para-desc-600 text-light-muted mb-0 mx-auto">Got a platform to build, a reliability problem to solve, or just want to talk engineering? I'm all ears.</p>
+                            <h2 class="title text-capitalize mb-4 wave-text" data-i18n="contact.title">Let's Build Something Together.</h2>
+                            <p class="pera-title para-desc-600 text-light-muted mb-0 mx-auto" data-i18n="contact.body">Got a platform to build, a reliability problem to solve, or just want to talk engineering? I'm all ears.</p>
                             <span></span>
                         </div>
                     </div>
@@ -212,6 +217,9 @@
     <!-- Three.js + GLSL Hills hero -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="js/glsl-hills.js"></script>
+
+    <!-- i18n -->
+    <script src="js/i18n.js"></script>
 
 </body>
 
