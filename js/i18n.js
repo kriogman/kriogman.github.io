@@ -151,7 +151,7 @@
       },
       page_quadrant: {
         hero: 'Site Reliability Engineer / DevOps Engineer @ ',
-        intro: 'Quadrant Travel Technology is a Spanish travel-tech company that builds the digital backbone for independent travel agencies — an integrated ecosystem of booking, distribution, and analytics platforms with connections to 22+ industry partners including Amadeus, Expedia, Iberia, and Hotelbeds. As part of the SRE/DevOps team I designed and built the cloud infrastructure, deployment automation, and operational reliability platform from the ground up.',
+        intro: 'Quadrant Travel Technology is a Spanish travel-tech company building the digital backbone for independent travel agencies. As part of the SRE/DevOps team, we designed and built the cloud infrastructure, deployment automation, and operational reliability platform from the ground up — running on AWS EKS across four isolated environments, with full IaC via Terraform and Terragrunt, GitOps via ArgoCD, and centralized CI/CD pipelines on GitLab.',
         role_title: 'My Role & Responsibilities',
         li1: 'Architected and built the entire AWS infrastructure from scratch using Infrastructure as Code (Terraform + Terragrunt), covering VPC networking, EKS clusters, RDS Aurora, MSK, ElastiCache, IAM, KMS, S3, and Route53 across dev, qa, pre, and prod environments',
         li2: 'Designed and implemented a full GitOps platform with ArgoCD \u2014 168 Applications across 76 ApplicationSets covering 60+ containerized microservices',
@@ -315,7 +315,7 @@
       },
       page_quadrant: {
         hero: 'Ingeniero SRE / DevOps Engineer @ ',
-        intro: 'Quadrant Travel Technology es una empresa espa\u00f1ola de travel-tech que construye la columna vertebral digital para agencias de viajes independientes \u2014 un ecosistema integrado de plataformas de reservas, distribuci\u00f3n y anal\u00edtica con conexiones a m\u00e1s de 22 partners del sector, incluyendo Amadeus, Expedia, Iberia y Hotelbeds. Como parte del equipo SRE/DevOps dise\u00f1\u00e9 y constru\u00ed la infraestructura cloud, la automatizaci\u00f3n del despliegue y la plataforma de fiabilidad operacional desde cero.',
+        intro: 'Quadrant Travel Technology es una empresa española de travel-tech que construye la columna vertebral digital para agencias de viajes independientes. Como parte del equipo SRE/DevOps, diseñamos y construimos la infraestructura cloud, la automatización del despliegue y la plataforma de fiabilidad operacional desde cero — sobre AWS EKS en cuatro entornos aislados, con IaC completa vía Terraform y Terragrunt, GitOps con ArgoCD y pipelines de CI/CD centralizados en GitLab.',
         role_title: 'Mi Rol y Responsabilidades',
         li1: 'Dise\u00f1\u00e9 y constru\u00ed toda la infraestructura AWS desde cero con Infrastructure as Code (Terraform + Terragrunt), incluyendo redes VPC, cl\u00fasteres EKS, RDS Aurora, MSK, ElastiCache, IAM, KMS, S3 y Route53 en entornos dev, qa, pre y prod',
         li2: 'Dise\u00f1\u00e9 e implement\u00e9 una plataforma GitOps completa con ArgoCD \u2014 168 Applications en 76 ApplicationSets cubriendo m\u00e1s de 60 microservicios en contenedores',
