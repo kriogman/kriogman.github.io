@@ -47,7 +47,7 @@
     min-height: 75vh;
     display: flex;
     align-items: center;
-    background-color: darken($deep-teal, 25%); // very dark derivation of palette
+    background-color: #1c2733; // darkened Blue Slate — hero base
 
     #hero-canvas {
         position: absolute;
@@ -78,7 +78,7 @@
     min-height: 260px;
     display: flex;
     align-items: center;
-    background-color: darken($deep-teal, 25%); // very dark derivation of palette
+    background-color: #1c2733; // darkened Blue Slate — hero base
     overflow: hidden;
 
     #hero-canvas {
@@ -106,7 +106,7 @@
         letter-spacing: -0.01em;
 
         a {
-            color: rgba($ash-grey, 0.9); // palette ash grey — matches hills tint
+            color: rgba($pale-sky, 0.85); // Pale Sky on dark hero
             &:hover { color: $white; }
         }
     }

@@ -6,27 +6,27 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&display=swap");
 
 // Palette 2026
-$soft-linen:                #e0e2db;
-$dust-grey:                 #d2d4c8;
-$ash-grey:                  #b8bdb5;
-$cool-steel:                #889696;
-$deep-teal:                 #5f7470;
+$blue-slate:                #495867;  // body text, dark UI elements
+$glaucous:                  #577399;  // primary: links, buttons, active nav
+$pale-sky:                  #bdd5ea;  // decorative: borders, muted, selection bg
+$ghost-white:               #f7f7ff;  // bg-light sections (near-white with blue tint)
+$vibrant-coral:             #fe5f55;  // accent: CTAs, highlights
 
 // Color variables
 $white:                     #ffffff;
-$black:                     $deep-teal;     // body text — 4.6:1 on white ✓ AA
+$black:                     $blue-slate;    // body text — 6.4:1 on white ✓ AA
 
-$custom:                    $cool-steel;    // decorative: preloader, selection
-$primary:                   $deep-teal;     // interactive — 4.6:1 on white ✓ AA
+$custom:                    $pale-sky;      // decorative: preloader, selection
+$primary:                   $glaucous;      // interactive — 4.7:1 on white ✓ AA
 $secondary:                 #6c757d;
 $success:                   #28a745;
 $info:                      #17a2b8;
 $warning:                   #ffc107;
 $danger:                    #dc3545;
-$dark:                      #343a40;
+$dark:                      $blue-slate;
 $muted:                     #707070;
-$light-muted:               #8492a6;
-$light:                     $soft-linen;    // bg-light sections
+$light-muted:               #7d95a8;        // blue-cohesive muted text
+$light:                     $ghost-white;   // bg-light sections
 
 // Body Background
 $body-bg:                   $white;
@@ -45,7 +45,8 @@ $theme-colors: (
     "dark": $dark,
     "muted": $muted,
     "light": $light,
-    "light-muted": $light-muted, 
+    "light-muted": $light-muted,
+    "coral": $vibrant-coral,
     "body-bg": $body-bg,
     "black": $black,
     "white": $white,

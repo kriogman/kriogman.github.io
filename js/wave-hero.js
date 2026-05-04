@@ -1,18 +1,18 @@
 // wave-hero.js — glowy waves canvas background (ported from React component)
-// Colors mapped to site palette: deep-teal / cool-steel / ash-grey / soft-linen
+// Colors mapped to site palette: blue-slate / glaucous / pale-sky / ghost-white / vibrant-coral
 
 (function () {
   'use strict';
 
-  var BACKGROUND_TOP    = '#1e2927';
-  var BACKGROUND_BOTTOM = '#152220';
+  var BACKGROUND_TOP    = '#1c2733';  // darkened Blue Slate
+  var BACKGROUND_BOTTOM = '#141e28';
 
   var WAVES = [
-    { offset: 0,                amplitude: 70, frequency: 0.003,  color: 'rgba(95,116,112,0.8)',   opacity: 0.45 },
-    { offset: Math.PI / 2,      amplitude: 90, frequency: 0.0026, color: 'rgba(136,150,150,0.7)',  opacity: 0.35 },
-    { offset: Math.PI,          amplitude: 60, frequency: 0.0034, color: 'rgba(184,189,181,0.65)', opacity: 0.30 },
-    { offset: Math.PI * 1.5,    amplitude: 80, frequency: 0.0022, color: 'rgba(210,212,200,0.25)', opacity: 0.25 },
-    { offset: Math.PI * 2,      amplitude: 55, frequency: 0.004,  color: 'rgba(224,226,219,0.2)',  opacity: 0.20 },
+    { offset: 0,                amplitude: 70, frequency: 0.003,  color: 'rgba(87,115,153,0.75)',  opacity: 0.45 },  // Glaucous
+    { offset: Math.PI / 2,      amplitude: 90, frequency: 0.0026, color: 'rgba(73,88,103,0.65)',   opacity: 0.35 },  // Blue Slate
+    { offset: Math.PI,          amplitude: 60, frequency: 0.0034, color: 'rgba(189,213,234,0.5)',  opacity: 0.30 },  // Pale Sky
+    { offset: Math.PI * 1.5,    amplitude: 80, frequency: 0.0022, color: 'rgba(254,95,85,0.12)',   opacity: 0.25 },  // Vibrant Coral hint
+    { offset: Math.PI * 2,      amplitude: 55, frequency: 0.004,  color: 'rgba(247,247,255,0.15)', opacity: 0.20 },  // Ghost White
   ];
 
   function init() {
