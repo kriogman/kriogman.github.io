@@ -58,7 +58,7 @@
       resume: {
         title: 'Work Experience',
         subtitle: 'These are the roles and tasks that I have performed in my years of experience.',
-        quadrant: { desc: 'Built the cloud platform from scratch for a Spanish travel-tech company — full IaC with Terraform, GitOps via ArgoCD, and centralized CI/CD pipelines on GitLab. Every environment declarative, every deployment automated, every secret out of Git.' },
+        quadrant: { desc: 'Full IaC with Terraform, GitOps via ArgoCD, and centralized CI/CD pipelines on GitLab. Every environment declarative, every deployment automated, every secret out of Git.' },
         '2gether': { desc: 'Embedded SRE at a regulated challenger bank offering crypto and fiat financial services. Owned the cloud infrastructure, observability stack, and CI/CD pipelines — keeping real-time financial operations stable while continuously driving down infrastructure costs.' },
         yogabot: { desc: 'R&D engagement exploring blockchain architecture and tokenomics to support a decentralized wellness ecosystem.' },
         personal: { desc: 'Completed a long-pending university degree while deepening knowledge in investments, financial markets, and distributed ledger technologies.' },
@@ -222,7 +222,7 @@
       resume: {
         title: 'Experiencia Laboral',
         subtitle: 'Estos son los roles y responsabilidades que he desempeñado a lo largo de mi carrera.',
-        quadrant: { desc: 'Construyó desde cero la plataforma cloud de una empresa española de travel-tech — IaC completa con Terraform, GitOps con ArgoCD y pipelines de CI/CD centralizados en GitLab. Cada entorno declarativo, cada despliegue automatizado, cada secreto fuera del repositorio.' },
+        quadrant: { desc: 'IaC completa con Terraform, GitOps con ArgoCD y pipelines de CI/CD centralizados en GitLab. Cada entorno declarativo, cada despliegue automatizado, cada secreto fuera del repositorio.' },
         '2gether': { desc: 'SRE integrado en un banco challenger regulado con servicios financieros en cripto y fiat. Responsable de la infraestructura cloud, el stack de observabilidad y los pipelines de CI/CD — manteniendo estables las operaciones en tiempo real mientras se reducían continuamente los costes de infraestructura.' },
         yogabot: { desc: 'Proyecto de I+D explorando arquitectura blockchain y tokenomics para un ecosistema de bienestar descentralizado.' },
         personal: { desc: 'Terminé una carrera universitaria pendiente mientras profundizaba en inversiones, mercados financieros y tecnologías de registro distribuido.' },
