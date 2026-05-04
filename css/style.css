@@ -893,6 +893,16 @@ button:not(:disabled) {
   color: rgba(255, 255, 255, 0.25);
 }
 
+.nav-sticky .lang-switcher .lang-option {
+  color: rgba(52, 58, 64, 0.5);
+}
+.nav-sticky .lang-switcher .lang-option:hover, .nav-sticky .lang-switcher .lang-option.active {
+  color: #343a40;
+}
+.nav-sticky .lang-switcher .lang-sep {
+  color: rgba(52, 58, 64, 0.25);
+}
+
 @media (max-width: 991px) {
   .lang-switcher {
     margin-left: 0;

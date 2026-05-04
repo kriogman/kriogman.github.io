@@ -211,6 +211,21 @@ button:not(:disabled) {
   }
 }
 
+.nav-sticky .lang-switcher {
+  .lang-option {
+    color: rgba($dark, 0.5);
+
+    &:hover,
+    &.active {
+      color: $dark;
+    }
+  }
+
+  .lang-sep {
+    color: rgba($dark, 0.25);
+  }
+}
+
 @media (max-width: 991px) {
   .lang-switcher {
     margin-left: 0;
