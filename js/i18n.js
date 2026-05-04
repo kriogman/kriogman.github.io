@@ -305,16 +305,17 @@
 
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var val = getKey(t, el.getAttribute('data-i18n'));
-      if (val) el.textContent = val;
+      if (val != null) el.textContent = val;
     });
 
     document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
       var raw = el.getAttribute('data-i18n-attr');
       var idx = raw.indexOf(':');
+      if (idx === -1) return;
       var attr = raw.slice(0, idx);
       var key  = raw.slice(idx + 1);
       var val  = getKey(t, key);
-      if (val) el.setAttribute(attr, val);
+      if (val != null) el.setAttribute(attr, val);
     });
 
     var typedSpan = document.querySelector('.element');
