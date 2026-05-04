@@ -58,7 +58,7 @@
       resume: {
         title: 'Work Experience',
         subtitle: 'These are the roles and tasks that I have performed in my years of experience.',
-        quadrant: { desc: 'Designing and operating cloud-native platform infrastructure using IaC and GitOps principles, with a focus on reliability, security, and scalability across the full delivery lifecycle.' },
+        quadrant: { desc: 'Built a production-grade AWS platform from scratch for a Spanish travel-tech company connecting independent agencies to 22+ industry partners. Designed the full delivery stack — Terraform + Terragrunt IaC, ArgoCD GitOps across 60+ containerized microservices in four environments, HashiCorp Vault for secrets, Karpenter autoscaling, and end-to-end observability with Prometheus, Grafana, and Loki.' },
         '2gether': { desc: 'Embedded SRE at a regulated challenger bank offering crypto and fiat financial services. Owned the cloud infrastructure, observability stack, and CI/CD pipelines — keeping real-time financial operations stable while continuously driving down infrastructure costs.' },
         yogabot: { desc: 'R&D engagement exploring blockchain architecture and tokenomics to support a decentralized wellness ecosystem.' },
         personal: { desc: 'Completed a long-pending university degree while deepening knowledge in investments, financial markets, and distributed ledger technologies.' },
@@ -222,7 +222,7 @@
       resume: {
         title: 'Experiencia Laboral',
         subtitle: 'Estos son los roles y responsabilidades que he desempeñado a lo largo de mi carrera.',
-        quadrant: { desc: 'Diseñando y operando infraestructura de plataforma cloud-native con principios de IaC y GitOps, con foco en fiabilidad, seguridad y escalabilidad a lo largo del ciclo de entrega completo.' },
+        quadrant: { desc: 'Construyó desde cero una plataforma AWS en producción para una empresa española de travel-tech que conecta agencias independientes con más de 22 socios del sector. Diseñó el stack completo de entrega — IaC con Terraform + Terragrunt, GitOps con ArgoCD sobre 60+ microservicios en contenedores en cuatro entornos, HashiCorp Vault para secretos, Karpenter para autoscaling, y observabilidad completa con Prometheus, Grafana y Loki.' },
         '2gether': { desc: 'SRE integrado en un banco challenger regulado con servicios financieros en cripto y fiat. Responsable de la infraestructura cloud, el stack de observabilidad y los pipelines de CI/CD — manteniendo estables las operaciones en tiempo real mientras se reducían continuamente los costes de infraestructura.' },
         yogabot: { desc: 'Proyecto de I+D explorando arquitectura blockchain y tokenomics para un ecosistema de bienestar descentralizado.' },
         personal: { desc: 'Terminé una carrera universitaria pendiente mientras profundizaba en inversiones, mercados financieros y tecnologías de registro distribuido.' },
