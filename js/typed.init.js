@@ -1,5 +1,4 @@
 
-
 // Typed Text
 var typedEl = document.querySelector(".element");
 if (typedEl) {
