@@ -16,6 +16,7 @@
       },
       about: {
         roles: 'DevOps Engineer, Site Reliability Engineer, Cloud Engineer',
+        iam_prefix: 'I Am a ',
         body: 'Over a decade designing, building, and operating cloud-native platforms. I work at the intersection of infrastructure, reliability, and developer experience — the systems and pipelines that let product teams ship fast without breaking things.',
         details: {
           title: 'Personal Details',
@@ -161,6 +162,7 @@
       },
       about: {
         roles: 'Ingeniero DevOps, Ingeniero de Fiabilidad, Ingeniero Cloud',
+        iam_prefix: 'Soy un ',
         body: 'Más de una década diseñando, construyendo y operando plataformas cloud-native. Trabajo en la intersección de infraestructura, fiabilidad y experiencia del desarrollador — los sistemas y pipelines que permiten a los equipos desplegar rápido sin romper nada.',
         details: {
           title: 'Datos Personales',
