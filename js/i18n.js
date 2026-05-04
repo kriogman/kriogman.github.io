@@ -62,7 +62,7 @@
         '2gether': { desc: 'As SRE at a regulated challenger bank in the crypto-fiat space, I owned cloud infrastructure, observability, and CI/CD end to end — high availability for real-time financial operations, and infrastructure costs consistently moving down.' },
         yogabot: { desc: 'R&D engagement exploring blockchain architecture and tokenomics to support a decentralized wellness ecosystem.' },
         personal: { desc: 'Completed a long-pending university degree while deepening knowledge in investments, financial markets, and distributed ledger technologies.' },
-        fintonic: { desc: 'As part of the DevOps/SRE team at a personal finance platform operating across Spain and Latin America, we started by mapping what was already there, then built out CI/CD pipelines and IaC tooling, migrated from IaaS to Kubernetes, and wired up observability across the full stack. Production stayed up throughout.' },
+        fintonic: { desc: 'As part of the DevOps team at a personal finance platform operating across Spain and Latin America, we drove a three-year infrastructure overhaul — migrating from IaaS to Kubernetes, building CI/CD pipelines and IaC tooling, and wiring up observability across the full stack. Production stayed up throughout.' },
         kimia: { desc: 'First IT role, at a global digital advertising company. Provisioned and managed bare metal Linux servers and AWS cloud infrastructure, built CI/CD pipelines, and wired up monitoring across the platform. The foundation that everything else was built on.' }
       },
       skills: {
@@ -226,7 +226,7 @@
         '2gether': { desc: 'Como SRE en un banco challenger regulado en el espacio cripto-fiat, me encargué de la infraestructura cloud, la observabilidad y el CI/CD de principio a fin — alta disponibilidad para operaciones financieras en tiempo real y costes en continuo descenso.' },
         yogabot: { desc: 'Proyecto de I+D explorando arquitectura blockchain y tokenomics para un ecosistema de bienestar descentralizado.' },
         personal: { desc: 'Terminé una carrera universitaria pendiente mientras profundizaba en inversiones, mercados financieros y tecnologías de registro distribuido.' },
-        fintonic: { desc: 'Como parte del equipo DevOps/SRE en una plataforma de finanzas personales con presencia en España y América Latina, empezamos mapeando lo que había, construimos pipelines de CI/CD y herramientas de IaC, migramos de IaaS a Kubernetes e integramos observabilidad en todo el stack. La producción se mantuvo operativa durante todo el proceso.' },
+        fintonic: { desc: 'Como parte del equipo DevOps en una plataforma de finanzas personales con presencia en España y América Latina, impulsamos una renovación de infraestructura de tres años — migrando de IaaS a Kubernetes, construyendo pipelines de CI/CD y herramientas de IaC, e integrando observabilidad en todo el stack. La producción se mantuvo operativa durante todo el proceso.' },
         kimia: { desc: 'Primer trabajo en IT, en una empresa global de publicidad digital. Aprovisioné y gestioné servidores bare metal Linux e infraestructura cloud en AWS, construí pipelines de CI/CD e integré monitorización en toda la plataforma. La base sobre la que se construyó todo lo demás.' }
       },
       skills: {
