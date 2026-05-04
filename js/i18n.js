@@ -31,7 +31,7 @@
         title: 'The mindset.',
         subtitle: 'Good engineering is as much about how you think as what you ship. These are the principles that guide how I approach reliability, delivery, and collaboration.',
         card1: {
-          title: 'Toil is a bug, not a feature',
+          title: 'Automate to eliminate toil',
           body: "Manual, repetitive work compounds quietly until it owns your week. Every process that can be codified should be — provisioning, testing, deployment, remediation. The goal of automation isn't efficiency. It's preserving engineering judgment for problems that actually require it."
         },
         card2: {
@@ -195,7 +195,7 @@
         title: 'La mentalidad.',
         subtitle: 'La buena ingeniería depende tanto de cómo piensas como de lo que construyes. Estos son los principios que guían mi forma de abordar la fiabilidad, la entrega y la colaboración.',
         card1: {
-          title: 'El trabajo repetitivo es un bug, no una característica',
+          title: 'Automatiza para eliminar el trabajo repetitivo',
           body: 'El trabajo manual y repetitivo se acumula en silencio hasta apoderarse de tu semana. Todo proceso que pueda codificarse debe serlo — aprovisionamiento, testing, despliegue, remediación. El objetivo de la automatización no es la eficiencia. Es preservar el criterio de ingeniería para los problemas que realmente lo requieren.'
         },
         card2: {
