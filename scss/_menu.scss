@@ -184,3 +184,49 @@ button:not(:disabled) {
     display: none;
   }
 }
+
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 12px;
+
+  .lang-option {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: rgba($white, 0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover,
+    &.active {
+      color: $white;
+    }
+  }
+
+  .lang-sep {
+    font-size: 0.75rem;
+    color: rgba($white, 0.25);
+  }
+}
+
+@media (max-width: 991px) {
+  .lang-switcher {
+    margin-left: 0;
+    margin-top: 8px;
+
+    .lang-option {
+      color: rgba($dark, 0.5);
+
+      &:hover,
+      &.active {
+        color: $dark;
+      }
+    }
+
+    .lang-sep {
+      color: rgba($dark, 0.25);
+    }
+  }
+}
