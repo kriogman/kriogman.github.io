@@ -151,20 +151,20 @@
       },
       page_quadrant: {
         hero: 'Site Reliability Engineer / DevOps Engineer @ ',
-        intro: 'Quadrant Travel Technology is a Spanish travel-tech company building the digital backbone for independent travel agencies. As part of the SRE/DevOps team, we designed and built the cloud infrastructure, deployment automation, and operational reliability platform from the ground up — running on AWS EKS across four isolated environments, with full IaC via Terraform and Terragrunt, GitOps via ArgoCD, and centralized CI/CD pipelines on GitLab.',
+        intro: 'Quadrant Travel Technology is a Spanish travel-tech company building the digital backbone for independent travel agencies. As part of the SRE/DevOps team, we designed and built the cloud infrastructure, deployment automation, and operational reliability platform from the ground up — running on AWS EKS across multiple isolated environments, with full IaC via Terraform and Terragrunt, GitOps via ArgoCD, and centralized CI/CD pipelines on GitLab.',
         role_title: 'My Role & Responsibilities',
-        li1: 'Architected and built the entire AWS infrastructure from scratch using Infrastructure as Code (Terraform + Terragrunt), covering VPC networking, EKS clusters, RDS Aurora, MSK, ElastiCache, IAM, KMS, S3, and Route53 across dev, qa, pre, and prod environments',
-        li2: 'Designed and implemented a full GitOps platform with ArgoCD \u2014 168 Applications across 76 ApplicationSets covering 60+ containerized microservices',
-        li3: 'Built centralized GitLab CI pipeline templates from zero: security scanning, multi-environment Docker builds, ECR pushes, and automated deployments',
-        li4: 'Integrated HashiCorp Vault with ArgoCD (AVP plugin) for zero-secret-in-Git secret management across 200+ application secrets',
-        li5: 'Configured node autoscaling with Karpenter (spot/on-demand mixed) and pod autoscaling with HPA, enforcing high availability with PodDisruptionBudgets',
-        li6: 'Deployed and maintain the full observability stack: Prometheus, Grafana, Loki, Jaeger, OpenTelemetry, Elasticsearch',
-        li7: 'Managed Aurora PostgreSQL v17 with read replicas and RDS Proxy for connection pooling in production',
-        li8: 'Operated Apache Kafka (AWS MSK) for domain event streaming and Kong API Gateway for internal/external traffic routing',
-        li9: 'Authored runbooks, incident response playbooks, and operational documentation for the engineering org',
+        li1: 'Built multi-environment AWS infrastructure from scratch using IaC with Terraform and Terragrunt — networking, compute, databases, messaging, and security layers all versioned and reproducible.',
+        li2: 'Implemented a GitOps platform with ArgoCD, managing containerized workloads across all environments with automated reconciliation and drift detection.',
+        li3: 'Built centralized GitLab CI pipeline templates — security scanning, Docker builds, registry pushes, and automated multi-environment deployments.',
+        li4: 'Integrated HashiCorp Vault with ArgoCD for zero-secret-in-Git secret management across the full application surface.',
+        li5: 'Led the migration from Cluster Autoscaler to Karpenter — mixed spot/on-demand node pools with HPA-driven pod scaling and PodDisruptionBudgets for zero-downtime deployments.',
+        li6: 'Deployed and maintained the full observability stack: Prometheus, Grafana, Loki, Jaeger, and OpenTelemetry.',
+        li7: 'Managed Aurora PostgreSQL with read replicas and RDS Proxy for connection pooling in production.',
+        li8: 'Operated Kafka for domain event streaming and Kong API Gateway for internal and external traffic routing.',
+        li9: 'Authored runbooks, incident response playbooks, and operational documentation for the engineering org.',
         stack_title: 'Tech Stack',
         outcomes_title: 'Key Outcomes',
-        outcomes: 'Designed and built from scratch a production-grade cloud platform on AWS supporting 60+ containerized microservices across four isolated environments, enabling continuous delivery for a travel technology suite used by independent agencies across Spain. Eliminated infrastructure drift through a fully declarative GitOps and IaC approach \u2014 every resource versioned, reviewed, and automatically reconciled. Achieved multi-AZ high availability via Karpenter node provisioning, HPA-driven pod scaling, and zero-downtime deployments enforced by PodDisruptionBudgets. Secured the entire secrets surface across 200+ application secrets with HashiCorp Vault \u2014 no credentials in Git, across any environment.'
+        outcomes: 'Built a production-grade cloud platform on AWS from scratch, enabling continuous delivery across multi-environment isolated deployments. Eliminated infrastructure drift through a fully declarative GitOps and IaC approach — every resource versioned, reviewed, and automatically reconciled. Led the migration from Cluster Autoscaler to Karpenter, improving node provisioning efficiency and cost with mixed spot/on-demand pools. High availability enforced across zones via HPA, PodDisruptionBudgets, and zero-downtime deployments. Secrets surface fully secured with HashiCorp Vault — no credentials in Git, across any environment.'
       }
     },
     es: {
@@ -315,20 +315,20 @@
       },
       page_quadrant: {
         hero: 'Ingeniero SRE / DevOps Engineer @ ',
-        intro: 'Quadrant Travel Technology es una empresa española de travel-tech que construye la columna vertebral digital para agencias de viajes independientes. Como parte del equipo SRE/DevOps, diseñamos y construimos la infraestructura cloud, la automatización del despliegue y la plataforma de fiabilidad operacional desde cero — sobre AWS EKS en cuatro entornos aislados, con IaC completa vía Terraform y Terragrunt, GitOps con ArgoCD y pipelines de CI/CD centralizados en GitLab.',
+        intro: 'Quadrant Travel Technology es una empresa española de travel-tech que construye la columna vertebral digital para agencias de viajes independientes. Como parte del equipo SRE/DevOps, diseñamos y construimos la infraestructura cloud, la automatización del despliegue y la plataforma de fiabilidad operacional desde cero — sobre AWS EKS en múltiples entornos aislados, con IaC completa vía Terraform y Terragrunt, GitOps con ArgoCD y pipelines de CI/CD centralizados en GitLab.',
         role_title: 'Mi Rol y Responsabilidades',
-        li1: 'Dise\u00f1\u00e9 y constru\u00ed toda la infraestructura AWS desde cero con Infrastructure as Code (Terraform + Terragrunt), incluyendo redes VPC, cl\u00fasteres EKS, RDS Aurora, MSK, ElastiCache, IAM, KMS, S3 y Route53 en entornos dev, qa, pre y prod',
-        li2: 'Dise\u00f1\u00e9 e implement\u00e9 una plataforma GitOps completa con ArgoCD \u2014 168 Applications en 76 ApplicationSets cubriendo m\u00e1s de 60 microservicios en contenedores',
-        li3: 'Constru\u00ed desde cero plantillas centralizadas de pipelines GitLab CI: escaneo de seguridad, builds Docker multi-entorno, pushes a ECR y despliegues automatizados',
-        li4: 'Integr\u00e9 HashiCorp Vault con ArgoCD (plugin AVP) para gesti\u00f3n de secretos sin credenciales en Git, cubriendo m\u00e1s de 200 secretos de aplicaci\u00f3n',
-        li5: 'Configur\u00e9 el autoescalado de nodos con Karpenter (spot/on-demand mixto) y el autoescalado de pods con HPA, garantizando alta disponibilidad con PodDisruptionBudgets',
-        li6: 'Despliegu\u00e9 y mantengo el stack de observabilidad completo: Prometheus, Grafana, Loki, Jaeger, OpenTelemetry, Elasticsearch',
-        li7: 'Gestion\u00e9 Aurora PostgreSQL v17 con r\u00e9plicas de lectura y RDS Proxy para connection pooling en producci\u00f3n',
-        li8: 'Oper\u00e9 Apache Kafka (AWS MSK) para streaming de eventos de dominio y Kong API Gateway para el enrutamiento de tr\u00e1fico interno/externo',
-        li9: 'Redact\u00e9 runbooks, playbooks de respuesta a incidentes y documentaci\u00f3n operativa para la organizaci\u00f3n de ingenier\u00eda',
+        li1: 'Construimos la infraestructura AWS multi-entorno desde cero con IaC (Terraform + Terragrunt) — redes, cómputo, bases de datos, mensajería y capas de seguridad, todo versionado y reproducible.',
+        li2: 'Implementamos una plataforma GitOps con ArgoCD, gestionando cargas de trabajo en contenedores en todos los entornos con reconciliación automática y detección de drift.',
+        li3: 'Construimos plantillas centralizadas de pipelines GitLab CI — escaneo de seguridad, builds Docker, pushes al registro y despliegues automatizados multi-entorno.',
+        li4: 'Integré HashiCorp Vault con ArgoCD para gestión de secretos sin credenciales en Git en toda la superficie de aplicaciones.',
+        li5: 'Lideré la migración de Cluster Autoscaler a Karpenter — pools de nodos mixtos spot/on-demand con escalado de pods con HPA y PodDisruptionBudgets para despliegues sin downtime.',
+        li6: 'Desplegamos y mantenemos el stack de observabilidad completo: Prometheus, Grafana, Loki, Jaeger y OpenTelemetry.',
+        li7: 'Gestioné Aurora PostgreSQL con réplicas de lectura y RDS Proxy para connection pooling en producción.',
+        li8: 'Operé Kafka para streaming de eventos de dominio y Kong API Gateway para el enrutamiento de tráfico interno y externo.',
+        li9: 'Redacté runbooks, playbooks de respuesta a incidentes y documentación operativa para la organización de ingeniería.',
         stack_title: 'Stack Tecnol\u00f3gico',
         outcomes_title: 'Resultados Clave',
-        outcomes: 'Dise\u00f1\u00e9 y constru\u00ed desde cero una plataforma cloud de calidad productiva en AWS que soporta m\u00e1s de 60 microservicios en contenedores en cuatro entornos aislados, habilitando la entrega continua para una suite de tecnolog\u00eda de viajes utilizada por agencias independientes en Espa\u00f1a. Elimin\u00e9 el drift de infraestructura mediante un enfoque completamente declarativo de GitOps e IaC \u2014 cada recurso versionado, revisado y reconciliado autom\u00e1ticamente. Logr\u00e9 alta disponibilidad multi-AZ mediante el aprovisionamiento de nodos con Karpenter, el escalado de pods con HPA y despliegues sin tiempo de inactividad garantizados con PodDisruptionBudgets. Asegu\u00e9 toda la superficie de secretos \u2014 m\u00e1s de 200 secretos de aplicaci\u00f3n con HashiCorp Vault \u2014 sin credenciales en Git, en ning\u00fan entorno.'
+        outcomes: 'Construimos desde cero una plataforma cloud de calidad productiva en AWS, habilitando la entrega continua en despliegues multi-entorno aislados. Eliminamos el drift de infraestructura mediante un enfoque completamente declarativo de GitOps e IaC — cada recurso versionado, revisado y reconciliado automáticamente. Lideré la migración de Cluster Autoscaler a Karpenter, mejorando la eficiencia y el coste del aprovisionamiento de nodos con pools mixtos spot/on-demand. Alta disponibilidad garantizada mediante HPA, PodDisruptionBudgets y despliegues sin downtime. Superficie de secretos completamente asegurada con HashiCorp Vault — sin credenciales en Git, en ningún entorno.'
       }
     }
   };
