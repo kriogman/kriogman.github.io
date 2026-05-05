@@ -164,7 +164,7 @@
         li9: 'Authored runbooks, incident response playbooks, and operational documentation for the engineering org.',
         stack_title: 'Tech Stack',
         outcomes_title: 'Key Outcomes',
-        outcomes: 'Built a production-grade cloud platform on AWS from scratch, enabling continuous delivery across multi-environment isolated deployments. Eliminated infrastructure drift through a fully declarative GitOps and IaC approach — every resource versioned, reviewed, and automatically reconciled. Led the migration from Cluster Autoscaler to Karpenter, improving node provisioning efficiency and cost with mixed spot/on-demand pools. High availability enforced across zones via HPA, PodDisruptionBudgets, and zero-downtime deployments. Secrets surface fully secured with HashiCorp Vault — no credentials in Git, across any environment.'
+        outcomes: 'Built a production-grade, highly available cloud platform on AWS from scratch — reliable by design, scalable on demand, and secure at every layer. Eliminated infrastructure drift through a fully declarative GitOps and IaC approach — every resource versioned, reviewed, and automatically reconciled. Led the migration from Cluster Autoscaler to Karpenter, achieving elastic node provisioning with mixed spot/on-demand pools and consistent cost efficiency. Resilience enforced across zones via multi-AZ deployments, HPA-driven pod scaling, and PodDisruptionBudgets for zero-downtime releases. Full secrets surface secured with HashiCorp Vault — no credentials in Git, across any environment.'
       }
     },
     es: {
@@ -328,7 +328,7 @@
         li9: 'Redacté runbooks, playbooks de respuesta a incidentes y documentación operativa para la organización de ingeniería.',
         stack_title: 'Stack Tecnol\u00f3gico',
         outcomes_title: 'Resultados Clave',
-        outcomes: 'Construimos desde cero una plataforma cloud de calidad productiva en AWS, habilitando la entrega continua en despliegues multi-entorno aislados. Eliminamos el drift de infraestructura mediante un enfoque completamente declarativo de GitOps e IaC — cada recurso versionado, revisado y reconciliado automáticamente. Lideré la migración de Cluster Autoscaler a Karpenter, mejorando la eficiencia y el coste del aprovisionamiento de nodos con pools mixtos spot/on-demand. Alta disponibilidad garantizada mediante HPA, PodDisruptionBudgets y despliegues sin downtime. Superficie de secretos completamente asegurada con HashiCorp Vault — sin credenciales en Git, en ningún entorno.'
+        outcomes: 'Construimos desde cero una plataforma cloud de calidad productiva en AWS — fiable por diseño, escalable bajo demanda y segura en cada capa. Eliminamos el drift de infraestructura mediante un enfoque completamente declarativo de GitOps e IaC — cada recurso versionado, revisado y reconciliado automáticamente. Lideré la migración de Cluster Autoscaler a Karpenter, logrando un aprovisionamiento de nodos elástico con pools mixtos spot/on-demand y eficiencia de costes consistente. Resiliencia garantizada mediante despliegues multi-AZ, escalado de pods con HPA y PodDisruptionBudgets para releases sin downtime. Superficie de secretos completamente asegurada con HashiCorp Vault — sin credenciales en Git, en ningún entorno.'
       }
     }
   };
