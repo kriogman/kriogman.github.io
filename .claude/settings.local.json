@@ -13,7 +13,31 @@
       "Bash(curl -sL https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css -o css/magnific-popup.css)",
       "Bash(curl -sL https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css -o css/materialdesignicons.min.css)",
       "Bash(sass scss/style.scss css/style.css --style=expanded)",
-      "Bash(sass scss/style.scss css/style.min.css --style=compressed)"
+      "Bash(sass scss/style.scss css/style.min.css --style=compressed)",
+      "WebFetch(domain:kriogman.com)",
+      "Read(//Users/kriogman/Documents/**)",
+      "Bash(pnpm create:*)",
+      "Bash(npm install:*)",
+      "Bash(pnpm --version)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm add:*)",
+      "Bash(pnpm build:*)",
+      "Bash(git *)",
+      "Bash(npm list *)",
+      "Read(//usr/local/**)",
+      "Bash(brew list *)",
+      "Bash(brew search *)",
+      "Bash(brew install *)",
+      "Bash(grep *)",
+      "Bash(xxd)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(bash *)",
+      "Bash(python3 *)"
     ]
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "ui-ux-pro-max@ui-ux-pro-max-skill": true
   }
 }

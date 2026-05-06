@@ -1,0 +1,398 @@
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', -apple-system, sans-serif; background: #f0f0f0; }
+
+  /* ── Palette reference strip ── */
+  .palette-strip {
+    display: flex;
+    height: 52px;
+    max-width: 900px;
+    margin: 24px auto 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  }
+  .swatch {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    gap: 2px;
+  }
+  .swatch span { opacity: 0.7; font-size: 0.55rem; }
+
+  /* ── Labels ── */
+  .section-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #999;
+    margin: 24px auto 8px;
+    max-width: 900px;
+    padding: 0 4px;
+  }
+
+  /* ── Hero preview ── */
+  .hero-preview {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  .hero-navbar {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 28px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .hero-logo {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+  .hero-nav-links {
+    display: flex;
+    gap: 20px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.55);
+  }
+  .hero-nav-links .active { color: #ee6c4d; }
+  .hero-lang {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.08em;
+  }
+  .hero-lang .active { color: rgba(255,255,255,0.9); }
+
+  .hero-body {
+    background: #293241;
+    padding: 48px 28px 52px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Decorative wave suggestion */
+  .hero-body::before {
+    content: '';
+    position: absolute;
+    bottom: -30px; left: -60px; right: -60px;
+    height: 90px;
+    background: radial-gradient(ellipse at 40% 100%, rgba(61,90,128,0.5) 0%, transparent 70%),
+                radial-gradient(ellipse at 70% 80%, rgba(152,193,217,0.2) 0%, transparent 60%);
+    border-radius: 50%;
+    filter: blur(18px);
+  }
+  .hero-photo {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    background: #3d5a80;
+    border: 3px solid rgba(152,193,217,0.4);
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+  }
+  .hero-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #e0fbfc;
+    text-align: center;
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+  }
+  .hero-tagline {
+    font-size: 0.88rem;
+    color: rgba(224,251,252,0.6);
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .hero-typed {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 0.8rem;
+    color: #ee6c4d;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── Sticky navbar preview ── */
+  .sticky-navbar {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 28px;
+    box-shadow: 0 4px 20px rgba(41,50,65,0.12);
+  }
+  .sticky-logo {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #293241;
+  }
+  .sticky-links {
+    display: flex;
+    gap: 20px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(41,50,65,0.5);
+  }
+  .sticky-links .active { color: #3d5a80; }
+  .sticky-links .hover { color: #ee6c4d; }
+
+  /* ── Light section preview ── */
+  .section-preview {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #e0fbfc;
+    border-radius: 10px;
+    padding: 28px 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+  .section-heading {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #293241;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .section-sub {
+    font-size: 0.78rem;
+    color: #5a7a90;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .cards-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .mini-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid rgba(61,90,128,0.1);
+  }
+  .mini-card-icon {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    background: rgba(61,90,128,0.1);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+  .mini-card-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #293241;
+    margin-bottom: 4px;
+  }
+  .mini-card-body {
+    font-size: 0.68rem;
+    color: #6b7a8d;
+    line-height: 1.5;
+  }
+
+  /* ── Buttons row ── */
+  .buttons-preview {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .btn { padding: 8px 20px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; cursor: default; display: inline-block; }
+  .btn-primary { background: #3d5a80; color: #fff; }
+  .btn-accent  { background: #ee6c4d; color: #fff; }
+  .btn-outline { background: transparent; color: #3d5a80; border: 2px solid #3d5a80; }
+  .btn-dark    { background: #293241; color: #e0fbfc; }
+  .btn-ghost   { background: rgba(61,90,128,0.08); color: #3d5a80; }
+  .btn-tag     { background: rgba(152,193,217,0.25); color: #3d5a80; padding: 4px 12px; border-radius: 20px; font-size: 0.68rem; }
+
+  /* ── Timeline item preview ── */
+  .timeline-preview {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+  .timeline-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(61,90,128,0.08);
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-dot {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(61,90,128,0.1);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    color: #3d5a80;
+    font-size: 0.85rem;
+  }
+  .timeline-content { flex: 1; }
+  .timeline-title { font-size: 0.82rem; font-weight: 700; color: #293241; }
+  .timeline-company { font-size: 0.7rem; color: #6b7a8d; margin-bottom: 4px; }
+  .timeline-badge { display: inline-block; font-size: 0.6rem; font-weight: 700; background: rgba(152,193,217,0.25); color: #3d5a80; padding: 2px 8px; border-radius: 10px; }
+  .timeline-accent { background: rgba(238,108,77,0.12); color: #ee6c4d; }
+
+  .spacer { height: 16px; }
+  .bottom-spacer { height: 32px; }
+</style>
+
+<!-- Palette strip -->
+<div style="max-width:900px;margin:24px auto 0;padding:0 4px;">
+  <h2 style="font-size:1.1rem;font-weight:700;color:#293241;margin-bottom:4px;">Tu paleta aplicada al portfolio</h2>
+  <p class="subtitle" style="margin-bottom:12px;">Así quedarían hero, navbar, secciones y componentes con los 5 colores.</p>
+</div>
+
+<div class="palette-strip">
+  <div class="swatch" style="background:#293241;color:#e0fbfc;">Jet Black<span>#293241</span></div>
+  <div class="swatch" style="background:#3d5a80;color:#e0fbfc;">Dusk Blue<span>#3d5a80</span></div>
+  <div class="swatch" style="background:#98c1d9;color:#293241;">Powder Blue<span>#98c1d9</span></div>
+  <div class="swatch" style="background:#e0fbfc;color:#293241;">Light Cyan<span>#e0fbfc</span></div>
+  <div class="swatch" style="background:#ee6c4d;color:#fff;">Burnt Peach<span>#ee6c4d</span></div>
+</div>
+
+<!-- Hero -->
+<div class="section-label">Hero (dark)</div>
+<div class="hero-preview">
+  <div style="background:#293241;">
+    <div class="hero-navbar">
+      <div class="hero-logo">Javier González.</div>
+      <div class="hero-nav-links">
+        <span class="active">Home</span>
+        <span>Mindset</span>
+        <span>Resume</span>
+        <span>Skills</span>
+      </div>
+      <div class="hero-lang"><span class="active">EN</span> / ES</div>
+    </div>
+    <div class="hero-body">
+      <div class="hero-photo">👤</div>
+      <div class="hero-title">Hi there, I'm Javier.</div>
+      <div class="hero-tagline">Building reliable, scalable infrastructure for fast-moving teams — so shipping is the default and ops is never the bottleneck.</div>
+      <div class="hero-typed">▌ Site Reliability Engineer</div>
+    </div>
+  </div>
+</div>
+
+<!-- Sticky navbar -->
+<div class="section-label">Navbar sticky (scroll)</div>
+<div class="sticky-navbar">
+  <div class="sticky-logo">Javier González.</div>
+  <div class="sticky-links">
+    <span class="active">Home</span>
+    <span>Mindset</span>
+    <span class="hover">Resume ←hover</span>
+    <span>Skills</span>
+  </div>
+  <div style="font-size:0.65rem;font-weight:700;color:rgba(41,50,65,0.4);">EN / ES</div>
+</div>
+
+<div class="spacer"></div>
+
+<!-- Light section -->
+<div class="section-label">Secciones claras (bg-light = Light Cyan)</div>
+<div class="section-preview">
+  <div class="section-heading">The mindset.</div>
+  <div class="section-sub">Good engineering is as much about how you think as what you ship.</div>
+  <div class="cards-row">
+    <div class="mini-card">
+      <div class="mini-card-icon" style="background:rgba(238,108,77,0.1);color:#ee6c4d;">⚙</div>
+      <div class="mini-card-title">Automate to eliminate toil</div>
+      <div class="mini-card-body">Manual, repetitive work compounds until it owns your week.</div>
+    </div>
+    <div class="mini-card">
+      <div class="mini-card-icon" style="background:rgba(61,90,128,0.1);color:#3d5a80;">∞</div>
+      <div class="mini-card-title">Deployment frequency is a health metric</div>
+      <div class="mini-card-body">Small, frequent releases compress feedback loops.</div>
+    </div>
+    <div class="mini-card">
+      <div class="mini-card-icon" style="background:rgba(61,90,128,0.1);color:#3d5a80;">⬡</div>
+      <div class="mini-card-title">The desired state lives in Git</div>
+      <div class="mini-card-body">Infrastructure defined as code is infrastructure you can audit.</div>
+    </div>
+  </div>
+</div>
+
+<div class="spacer"></div>
+
+<!-- Buttons -->
+<div class="section-label">Botones y elementos interactivos</div>
+<div class="buttons-preview">
+  <div class="btn btn-primary">Primary</div>
+  <div class="btn btn-accent">Accent / CTA</div>
+  <div class="btn btn-outline">Outline</div>
+  <div class="btn btn-dark">Dark</div>
+  <div class="btn btn-ghost">Ghost</div>
+  <div class="btn btn-tag">AWS</div>
+  <div class="btn btn-tag">Kubernetes</div>
+  <div style="margin-left:auto;font-size:0.72rem;color:#6b7a8d;">
+    <span style="color:#3d5a80;font-weight:700;">Links activos en Dusk Blue</span> ·
+    <span style="color:#ee6c4d;font-weight:700;">CTAs en Burnt Peach</span>
+  </div>
+</div>
+
+<div class="spacer"></div>
+
+<!-- Timeline preview -->
+<div class="section-label">Timeline de experiencia</div>
+<div class="timeline-preview">
+  <div class="timeline-item">
+    <div class="timeline-dot">🧭</div>
+    <div class="timeline-content">
+      <div class="timeline-title">DevOps Engineer</div>
+      <div class="timeline-company">Quadrant Travel Technologies</div>
+      <span class="timeline-badge timeline-accent">2022 – presente</span>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-dot">⚡</div>
+    <div class="timeline-content">
+      <div class="timeline-title">Site Reliability Engineer</div>
+      <div class="timeline-company">2gether</div>
+      <span class="timeline-badge">2021 – 2022</span>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-dot">📈</div>
+    <div class="timeline-content">
+      <div class="timeline-title">DevOps Engineer</div>
+      <div class="timeline-company">Fintonic</div>
+      <span class="timeline-badge">2017 – 2020</span>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-spacer"></div>

@@ -1,0 +1,266 @@
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', -apple-system, sans-serif; background: #f4f4f4; padding: 32px 24px; }
+
+  h2 { font-size: 1.4rem; font-weight: 700; color: #111; margin-bottom: 6px; }
+  .subtitle { font-size: 0.95rem; color: #555; margin-bottom: 32px; }
+
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .palette-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  .palette-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+  .palette-card.selected { border-color: #111; box-shadow: 0 0 0 3px rgba(0,0,0,0.15); }
+
+  /* Hero preview area */
+  .palette-hero {
+    padding: 28px 24px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .palette-hero-name {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.45;
+  }
+  .palette-hero-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .palette-hero-sub {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    opacity: 0.7;
+    margin-top: 2px;
+  }
+  .palette-hero-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-top: 6px;
+    width: fit-content;
+  }
+
+  /* Swatches */
+  .swatches {
+    display: flex;
+    height: 36px;
+  }
+  .swatch { flex: 1; }
+
+  /* Light section preview */
+  .palette-section {
+    padding: 18px 20px;
+    border-top: 1px solid #eee;
+  }
+  .palette-section-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  .mini-card {
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+  .mini-card-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .mini-card-body {
+    font-size: 0.72rem;
+    line-height: 1.5;
+    opacity: 0.6;
+  }
+  .mini-btn {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .mini-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+  .mini-nav-links { display: flex; gap: 12px; opacity: 0.6; font-size: 0.65rem; }
+  .mini-nav-active { opacity: 1 !important; }
+
+  /* Palette label */
+  .palette-label {
+    padding: 14px 20px;
+    border-top: 1px solid #eee;
+  }
+  .palette-label h3 { font-size: 0.9rem; font-weight: 700; color: #111; margin-bottom: 3px; }
+  .palette-label p { font-size: 0.75rem; color: #777; line-height: 1.4; }
+  .palette-letter {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #111;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 22px;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+</style>
+
+<h2>Propuestas de paleta de color</h2>
+<p class="subtitle">Tres direcciones distintas. Haz clic para seleccionar la que más te atraiga.</p>
+
+<div class="palette-grid">
+
+  <!-- OPTION A: Midnight Slate + Electric Blue -->
+  <div class="palette-card" data-choice="a" onclick="toggleSelect(this)">
+    <!-- Hero preview -->
+    <div class="palette-hero" style="background: #0f172a; color: #fff;">
+      <div class="palette-hero-name" style="color: rgba(255,255,255,0.4);">DevOps · SRE · Cloud</div>
+      <div class="palette-hero-title">Hi there, I'm Javier.</div>
+      <div class="palette-hero-sub">Building reliable, scalable infrastructure for fast-moving teams — so shipping is the default.</div>
+      <div class="palette-hero-badge" style="background: rgba(59,130,246,0.18); color: #60a5fa;">Site Reliability Engineer</div>
+    </div>
+    <!-- Color swatches -->
+    <div class="swatches">
+      <div class="swatch" style="background:#0f172a;" title="#0f172a"></div>
+      <div class="swatch" style="background:#1e3a5f;" title="#1e3a5f"></div>
+      <div class="swatch" style="background:#3b82f6;" title="#3b82f6"></div>
+      <div class="swatch" style="background:#93c5fd;" title="#93c5fd"></div>
+      <div class="swatch" style="background:#f1f5f9;" title="#f1f5f9"></div>
+    </div>
+    <!-- Light section preview -->
+    <div class="palette-section" style="background:#f8fafc;">
+      <div class="palette-section-label">Light sections</div>
+      <div class="mini-nav" style="background:#fff; color:#0f172a; border:1px solid #e2e8f0;">
+        <span>Javier González.</span>
+        <div class="mini-nav-links" style="color:#64748b;">
+          <span class="mini-nav-active" style="color:#3b82f6">Home</span>
+          <span>Resume</span>
+          <span>Skills</span>
+        </div>
+      </div>
+      <div class="mini-card" style="background:#fff; color:#0f172a;">
+        <div class="mini-card-title">Automate to eliminate toil</div>
+        <div class="mini-card-body">Manual, repetitive work compounds until it owns your week. Codify everything that can be codified.</div>
+        <div class="mini-btn" style="background:#3b82f6; color:#fff;">Ver más</div>
+      </div>
+    </div>
+    <div class="palette-label">
+      <h3><span class="palette-letter">A</span>Midnight Slate + Electric Blue</h3>
+      <p>GitHub · Stripe · Linear — el lenguaje visual de la infraestructura moderna.</p>
+    </div>
+  </div>
+
+  <!-- OPTION B: Graphite + Violet -->
+  <div class="palette-card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="palette-hero" style="background: #13111c; color: #fff;">
+      <div class="palette-hero-name" style="color: rgba(255,255,255,0.4);">DevOps · SRE · Cloud</div>
+      <div class="palette-hero-title">Hi there, I'm Javier.</div>
+      <div class="palette-hero-sub">Building reliable, scalable infrastructure for fast-moving teams — so shipping is the default.</div>
+      <div class="palette-hero-badge" style="background: rgba(139,92,246,0.2); color: #c4b5fd;">Site Reliability Engineer</div>
+    </div>
+    <div class="swatches">
+      <div class="swatch" style="background:#13111c;"></div>
+      <div class="swatch" style="background:#2e1e5c;"></div>
+      <div class="swatch" style="background:#8b5cf6;"></div>
+      <div class="swatch" style="background:#c4b5fd;"></div>
+      <div class="swatch" style="background:#faf5ff;"></div>
+    </div>
+    <div class="palette-section" style="background:#faf9ff;">
+      <div class="palette-section-label">Light sections</div>
+      <div class="mini-nav" style="background:#fff; color:#13111c; border:1px solid #ede9fe;">
+        <span>Javier González.</span>
+        <div class="mini-nav-links" style="color:#6b7280;">
+          <span class="mini-nav-active" style="color:#8b5cf6">Home</span>
+          <span>Resume</span>
+          <span>Skills</span>
+        </div>
+      </div>
+      <div class="mini-card" style="background:#fff; color:#13111c;">
+        <div class="mini-card-title">Automate to eliminate toil</div>
+        <div class="mini-card-body">Manual, repetitive work compounds until it owns your week. Codify everything that can be codified.</div>
+        <div class="mini-btn" style="background:#8b5cf6; color:#fff;">Ver más</div>
+      </div>
+    </div>
+    <div class="palette-label">
+      <h3><span class="palette-letter">B</span>Graphite + Violet</h3>
+      <p>HashiCorp · Clerk · Vercel — premium, distinto, sofisticado.</p>
+    </div>
+  </div>
+
+  <!-- OPTION C: Deep Teal + Cyan (evolution) -->
+  <div class="palette-card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="palette-hero" style="background: #071e1c; color: #fff;">
+      <div class="palette-hero-name" style="color: rgba(255,255,255,0.4);">DevOps · SRE · Cloud</div>
+      <div class="palette-hero-title">Hi there, I'm Javier.</div>
+      <div class="palette-hero-sub">Building reliable, scalable infrastructure for fast-moving teams — so shipping is the default.</div>
+      <div class="palette-hero-badge" style="background: rgba(6,182,212,0.18); color: #67e8f9;">Site Reliability Engineer</div>
+    </div>
+    <div class="swatches">
+      <div class="swatch" style="background:#071e1c;"></div>
+      <div class="swatch" style="background:#0e4a45;"></div>
+      <div class="swatch" style="background:#06b6d4;"></div>
+      <div class="swatch" style="background:#67e8f9;"></div>
+      <div class="swatch" style="background:#ecfeff;"></div>
+    </div>
+    <div class="palette-section" style="background:#f0fdfc;">
+      <div class="palette-section-label">Light sections</div>
+      <div class="mini-nav" style="background:#fff; color:#071e1c; border:1px solid #cffafe;">
+        <span>Javier González.</span>
+        <div class="mini-nav-links" style="color:#6b7280;">
+          <span class="mini-nav-active" style="color:#0891b2">Home</span>
+          <span>Resume</span>
+          <span>Skills</span>
+        </div>
+      </div>
+      <div class="mini-card" style="background:#fff; color:#071e1c;">
+        <div class="mini-card-title">Automate to eliminate toil</div>
+        <div class="mini-card-body">Manual, repetitive work compounds until it owns your week. Codify everything that can be codified.</div>
+        <div class="mini-btn" style="background:#06b6d4; color:#fff;">Ver más</div>
+      </div>
+    </div>
+    <div class="palette-label">
+      <h3><span class="palette-letter">C</span>Deep Teal + Cyan</h3>
+      <p>Grafana · AWS · Datadog — evolución natural del teal actual, con energía digital real.</p>
+    </div>
+  </div>
+
+</div>

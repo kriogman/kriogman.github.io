@@ -1,0 +1,361 @@
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', -apple-system, sans-serif; background: #eceef1; }
+
+  .palette-strip {
+    display: flex;
+    height: 52px;
+    max-width: 900px;
+    margin: 24px auto 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  }
+  .swatch {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    gap: 2px;
+  }
+  .swatch span { opacity: 0.65; font-size: 0.52rem; }
+
+  .section-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #888;
+    margin: 20px auto 8px;
+    max-width: 900px;
+    padding: 0 4px;
+  }
+  .spacer { height: 12px; }
+  .bottom-spacer { height: 32px; }
+
+  /* ── Hero ── */
+  .hero-preview {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  .hero-navbar {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 28px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .hero-logo { font-size: 0.9rem; font-weight: 700; color: #f7f7ff; letter-spacing: 0.5px; }
+  .hero-nav-links {
+    display: flex; gap: 20px;
+    font-size: 0.68rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: rgba(189,213,234,0.5);
+  }
+  .hero-nav-links .active { color: #fe5f55; }
+  .hero-lang { font-size: 0.65rem; font-weight: 700; color: rgba(247,247,255,0.35); letter-spacing: 0.08em; }
+  .hero-lang .active { color: rgba(247,247,255,0.85); }
+
+  .hero-body {
+    background: linear-gradient(160deg, #1c2733 0%, #243347 100%);
+    padding: 48px 28px 52px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-body::before {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: -80px; right: -80px; height: 110px;
+    background:
+      radial-gradient(ellipse at 35% 100%, rgba(87,115,153,0.45) 0%, transparent 65%),
+      radial-gradient(ellipse at 68% 80%, rgba(189,213,234,0.15) 0%, transparent 55%);
+    filter: blur(22px);
+  }
+  .hero-photo {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    background: #495867;
+    border: 3px solid rgba(189,213,234,0.35);
+    margin: 0 auto 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.6rem;
+    position: relative; z-index: 1;
+  }
+  .hero-title {
+    font-size: 1.7rem; font-weight: 700;
+    color: #f7f7ff; text-align: center;
+    letter-spacing: -0.02em; margin-bottom: 10px;
+    position: relative; z-index: 1;
+  }
+  .hero-tagline {
+    font-size: 0.88rem; color: rgba(189,213,234,0.65);
+    text-align: center; max-width: 480px;
+    margin: 0 auto; line-height: 1.6;
+    position: relative; z-index: 1;
+  }
+  .hero-typed {
+    text-align: center; margin-top: 14px;
+    font-size: 0.8rem; color: #fe5f55;
+    font-weight: 700; letter-spacing: 0.04em;
+    position: relative; z-index: 1;
+  }
+
+  /* ── Sticky navbar ── */
+  .sticky-navbar {
+    max-width: 900px; margin: 0 auto;
+    background: #f7f7ff;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 28px;
+    box-shadow: 0 4px 20px rgba(73,88,103,0.12);
+    border: 1px solid rgba(189,213,234,0.4);
+  }
+  .sticky-logo { font-size: 0.9rem; font-weight: 700; color: #495867; }
+  .sticky-links {
+    display: flex; gap: 20px;
+    font-size: 0.68rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: rgba(73,88,103,0.45);
+  }
+  .sticky-links .active { color: #577399; }
+  .sticky-links .hover  { color: #fe5f55; }
+
+  /* ── Light section ── */
+  .section-preview {
+    max-width: 900px; margin: 0 auto;
+    background: #f7f7ff;
+    border-radius: 10px; padding: 28px 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .section-heading {
+    font-size: 1.3rem; font-weight: 700;
+    color: #495867; text-align: center; margin-bottom: 6px;
+  }
+  .section-sub {
+    font-size: 0.78rem; color: #7d95a8;
+    text-align: center; margin-bottom: 20px;
+  }
+  .cards-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .mini-card {
+    background: #fff; border-radius: 8px; padding: 16px;
+    border: 1px solid rgba(87,115,153,0.12);
+    box-shadow: 0 1px 4px rgba(73,88,103,0.06);
+  }
+  .mini-card-icon {
+    width: 32px; height: 32px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 10px; font-size: 0.9rem;
+  }
+  .mini-card-title { font-size: 0.78rem; font-weight: 700; color: #495867; margin-bottom: 4px; }
+  .mini-card-body  { font-size: 0.68rem; color: #7d95a8; line-height: 1.5; }
+
+  /* ── Buttons ── */
+  .buttons-preview {
+    max-width: 900px; margin: 0 auto;
+    background: #fff; border-radius: 10px; padding: 20px 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(189,213,234,0.4);
+    display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  }
+  .btn { padding: 8px 20px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; cursor: default; display: inline-block; }
+  .btn-primary { background: #577399; color: #f7f7ff; }
+  .btn-accent  { background: #fe5f55; color: #fff; }
+  .btn-outline { background: transparent; color: #577399; border: 2px solid #577399; }
+  .btn-dark    { background: #495867; color: #f7f7ff; }
+  .btn-ghost   { background: rgba(87,115,153,0.1); color: #577399; }
+  .btn-tag     { background: rgba(189,213,234,0.35); color: #495867; padding: 4px 12px; border-radius: 20px; font-size: 0.68rem; }
+
+  /* ── Timeline ── */
+  .timeline-preview {
+    max-width: 900px; margin: 0 auto;
+    background: #fff; border-radius: 10px; padding: 20px 24px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(189,213,234,0.4);
+  }
+  .timeline-item {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 12px 0; border-bottom: 1px solid rgba(87,115,153,0.08);
+  }
+  .timeline-item:last-child { border-bottom: none; }
+  .timeline-dot {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(87,115,153,0.1);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; color: #577399; font-size: 0.85rem;
+  }
+  .timeline-title   { font-size: 0.82rem; font-weight: 700; color: #495867; }
+  .timeline-company { font-size: 0.7rem; color: #7d95a8; margin-bottom: 4px; }
+  .timeline-badge {
+    display: inline-block; font-size: 0.6rem; font-weight: 700;
+    background: rgba(189,213,234,0.3); color: #577399;
+    padding: 2px 8px; border-radius: 10px;
+  }
+  .timeline-accent { background: rgba(254,95,85,0.1); color: #fe5f55; }
+
+  /* ── Social icons ── */
+  .socials-preview {
+    max-width: 900px; margin: 0 auto;
+    background: #f7f7ff; border-radius: 10px; padding: 16px 24px;
+    display: flex; align-items: center; gap: 6px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(189,213,234,0.4);
+  }
+  .social-icon {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: rgba(87,115,153,0.12);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem; color: #577399; cursor: default;
+  }
+  .social-icon.hover-li { color: #0077b5; background: rgba(0,119,181,0.1); }
+  .social-icon.hover-gh { color: #495867; background: rgba(73,88,103,0.12); }
+  .social-icon.hover-co { color: #fe5f55; background: rgba(254,95,85,0.1); }
+  .social-label { font-size: 0.68rem; color: #7d95a8; margin-left: 8px; }
+</style>
+
+<!-- Header -->
+<div style="max-width:900px;margin:24px auto 0;padding:0 4px;">
+  <h2 style="font-size:1.1rem;font-weight:700;color:#495867;margin-bottom:4px;">Paleta Blue Slate / Coral</h2>
+  <p style="font-size:0.82rem;color:#7d95a8;margin-bottom:12px;">Azules fríos + Coral vibrante. Misma estructura de uso que la anterior, otra temperatura.</p>
+</div>
+
+<!-- Swatches -->
+<div class="palette-strip">
+  <div class="swatch" style="background:#1c2733;color:#bdd5ea;">Dark Hero<span>derived</span></div>
+  <div class="swatch" style="background:#495867;color:#f7f7ff;">Blue Slate<span>#495867</span></div>
+  <div class="swatch" style="background:#577399;color:#f7f7ff;">Glaucous<span>#577399</span></div>
+  <div class="swatch" style="background:#bdd5ea;color:#495867;">Pale Sky<span>#bdd5ea</span></div>
+  <div class="swatch" style="background:#f7f7ff;color:#495867;border:1px solid #dde3e8;">Ghost White<span>#f7f7ff</span></div>
+  <div class="swatch" style="background:#fe5f55;color:#fff;">Coral<span>#fe5f55</span></div>
+</div>
+
+<!-- Hero -->
+<div class="section-label">Hero (dark)</div>
+<div class="hero-preview">
+  <div style="background:linear-gradient(160deg,#1c2733 0%,#243347 100%);">
+    <div class="hero-navbar">
+      <div class="hero-logo">Javier González.</div>
+      <div class="hero-nav-links">
+        <span class="active">Home</span><span>Mindset</span><span>Resume</span><span>Skills</span>
+      </div>
+      <div class="hero-lang"><span class="active">EN</span> / ES</div>
+    </div>
+    <div class="hero-body">
+      <div class="hero-photo">👤</div>
+      <div class="hero-title">Hi there, I'm Javier.</div>
+      <div class="hero-tagline">Building reliable, scalable infrastructure for fast-moving teams — so shipping is the default and ops is never the bottleneck.</div>
+      <div class="hero-typed">▌ Site Reliability Engineer</div>
+    </div>
+  </div>
+</div>
+
+<!-- Sticky navbar -->
+<div class="section-label">Navbar sticky (scroll)</div>
+<div class="sticky-navbar">
+  <div class="sticky-logo">Javier González.</div>
+  <div class="sticky-links">
+    <span class="active">Home</span><span>Mindset</span>
+    <span class="hover">Resume ←hover</span><span>Skills</span>
+  </div>
+  <div style="font-size:0.65rem;font-weight:700;color:rgba(73,88,103,0.4);">EN / ES</div>
+</div>
+
+<div class="spacer"></div>
+
+<!-- Light section -->
+<div class="section-label">Secciones claras (Ghost White #f7f7ff)</div>
+<div class="section-preview">
+  <div class="section-heading">The mindset.</div>
+  <div class="section-sub">Good engineering is as much about how you think as what you ship.</div>
+  <div class="cards-row">
+    <div class="mini-card">
+      <div class="mini-card-icon" style="background:rgba(254,95,85,0.1);color:#fe5f55;">⚙</div>
+      <div class="mini-card-title">Automate to eliminate toil</div>
+      <div class="mini-card-body">Manual, repetitive work compounds until it owns your week.</div>
+    </div>
+    <div class="mini-card">
+      <div class="mini-card-icon" style="background:rgba(87,115,153,0.1);color:#577399;">∞</div>
+      <div class="mini-card-title">Deployment frequency is a health metric</div>
+      <div class="mini-card-body">Small, frequent releases compress feedback loops.</div>
+    </div>
+    <div class="mini-card">
+      <div class="mini-card-icon" style="background:rgba(87,115,153,0.1);color:#577399;">⬡</div>
+      <div class="mini-card-title">The desired state lives in Git</div>
+      <div class="mini-card-body">Infrastructure defined as code is infrastructure you can audit.</div>
+    </div>
+  </div>
+</div>
+
+<div class="spacer"></div>
+
+<!-- Buttons -->
+<div class="section-label">Botones y estados interactivos</div>
+<div class="buttons-preview">
+  <div class="btn btn-primary">Primary</div>
+  <div class="btn btn-accent">Accent / CTA</div>
+  <div class="btn btn-outline">Outline</div>
+  <div class="btn btn-dark">Dark</div>
+  <div class="btn btn-ghost">Ghost</div>
+  <div class="btn btn-tag">AWS</div>
+  <div class="btn btn-tag">Kubernetes</div>
+  <div style="margin-left:auto;font-size:0.7rem;color:#7d95a8;">
+    <span style="color:#577399;font-weight:700;">Glaucous</span> para nav/links ·
+    <span style="color:#fe5f55;font-weight:700;">Coral</span> para CTAs
+  </div>
+</div>
+
+<div class="spacer"></div>
+
+<!-- Timeline -->
+<div class="section-label">Timeline de experiencia</div>
+<div class="timeline-preview">
+  <div class="timeline-item">
+    <div class="timeline-dot">🧭</div>
+    <div>
+      <div class="timeline-title">DevOps Engineer</div>
+      <div class="timeline-company">Quadrant Travel Technologies</div>
+      <span class="timeline-badge timeline-accent">2022 – presente</span>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-dot">⚡</div>
+    <div>
+      <div class="timeline-title">Site Reliability Engineer</div>
+      <div class="timeline-company">2gether</div>
+      <span class="timeline-badge">2021 – 2022</span>
+    </div>
+  </div>
+  <div class="timeline-item">
+    <div class="timeline-dot">📈</div>
+    <div>
+      <div class="timeline-title">DevOps Engineer</div>
+      <div class="timeline-company">Fintonic</div>
+      <span class="timeline-badge">2017 – 2020</span>
+    </div>
+  </div>
+</div>
+
+<div class="spacer"></div>
+
+<!-- Social icons -->
+<div class="section-label">Iconos sociales (navbar)</div>
+<div class="socials-preview">
+  <div class="social-icon">in</div>
+  <div class="social-icon">gh</div>
+  <div class="social-icon">ig</div>
+  <div class="social-label">→ en hover:</div>
+  <div class="social-icon hover-li">in</div>
+  <div class="social-icon hover-gh">gh</div>
+  <div class="social-icon hover-co">ig</div>
+  <div style="margin-left:auto;font-size:0.68rem;color:#bdd5ea;background:#577399;padding:4px 10px;border-radius:6px;font-weight:700;">Pale Sky sobre Glaucous</div>
+</div>
+
+<div class="bottom-spacer"></div>
